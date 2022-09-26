@@ -1,0 +1,353 @@
+{
+  "currentValue":"વર્તમાન કિંમત",
+  "investment":"રોકાણ",
+  "createGoals":"ગોલ બનાવો",
+  "bigDecisions":"મોટા નિર્ણયો",
+  "retirement":"નિવૃત્તિ",
+  "insurance":"વીમા",
+  "childFuture":"બાળ ભવિષ્ય",
+  "housing":"હાઉસિંગ",
+  "smallDecisions":"મોટા નિર્ણયો",
+  "reserveFund":"અનામત ભંડોળ",
+  "indulge":"રીઝવવું",
+  "car":"કાર",
+  "holiday":"રજા",
+  "newBeginnings":"નવી શરૂઆતો",
+  "openDemat":"ડીમેટ ખોલો",
+  "saveTax":"સેવટેક્સ",
+  "learnwithphi":"ફી સાથે શીખો",
+  "home":"ઘર",
+  "pocket":"ખિસ્સું",
+  "explore":"અન્વેષણ કરો",
+  "stories":"વાર્તાઓ",
+  "rewards":"પારિતોષિકો",
+
+
+
+
+  "onboardyourjourney":"તમારી મુસાફરી પર જાઓ",
+  "itdoesntcosttointroduceyourself":"તમારો પરિચય આપવાનો કોઈ ખર્ચ નથી",
+  "clickhere":"અહીં ક્લિક કરો",
+  "letyourmoneyworkforyou":"તમારા પૈસા તમારા માટે કામ કરવા દો!",
+  "startaSIP":"SIP શરૂ કરો",
+  "iamabeginner":"હું શિખાઉ માણસ છું",
+  "investinDigitalGold":"ડિજિટલ ગોલ્ડમાં રોકાણ કરો",
+  "setupyouraccount":"તમારું એકાઉન્ટ સેટ કરો",
+  "kycCheck":"KycCheck",
+  "pending":"બાકી",
+  "personalDetails":"અંગત વિગતો",
+  "bankDetails":"બેંકની વિગત",
+  "referearn":"સંદર્ભ લો અને કમાઓ",
+
+
+
+  "letsbegun":"ચાલો શરુ કરીએ…",
+  "weneedyourpantoprocessfurther":"આગળ પ્રક્રિયા કરવા માટે અમને તમારા પેનની જરૂર છે.",
+  "pAN":"પાન",
+  "kYCVerified":"કેવાયસી ચકાસાયેલ",
+  "nameasperpan":"પાન મુજબ નામ",
+  "continueText":"ચાલુ રાખો",
+  "confirmContinue":"પુષ્ટિ કરો અને ચાલુ રાખો",
+  "personalInformation":"વ્યક્તિગત માહિતી",
+  "firstName":"પ્રથમ નામ",
+  "enterhere":"અહીં દાખલ કરો",
+  "lastName":"છેલ્લું નામ",
+  "gender":"જાતિ",
+  "male":"પુરુષ",
+  "female":"સ્ત્રી",
+  "others":"અન્ય",
+  "dateofBirth":"જન્મ તારીખ",
+  "maritalStatus":"વૈવાહિક સ્થિતિ",
+  "single":"અપરિણીત",
+  "married":"પરિણીત",
+  "familyDetails":"કૌટુંબિક વિગતો",
+  "fathersName":"પિતાનું નામ",
+  "mothersName":"માતાનું નામ",
+  "addressDetails":"સરનામાંની વિગતો",
+  "pincode":"પીન કોડ",
+  "city":"શહેર",
+  "state":"રાજ્ય",
+  "country":"દેશ",
+  "professionalDetails":"વ્યવસાયિક વિગતો",
+  "occupationDetails":"વ્યવસાય વિગતો",
+  "incomeDetails":"આવકની વિગતો",
+  "birthPlace":"જન્મસ્થળ",
+  "birthCountry":"જન્મ દેશ",
+
+
+
+
+
+  "doyoupaytaxesoutsideIndia":"શું તમે ભારતની બહાર કર ચૂકવો છો?",
+  "yes":"હા",
+  "no":"ના",
+  "countryyoupaytaxoutsideIndia":"ભારતની બહાર તમે ટેક્સ ચૂકવો છો તે દેશ",
+  "areyouPoliticallyexposedorrelated":"શું તમે રાજકીય રીતે ખુલ્લા છો અથવા સંબંધિત છો?",
+  "taxIdentificationNumber":"ટેક્સ આઇડેન્ટિફિકેશન નંબર",
+  "iampoliticallyexposed":"હું રાજકીય રીતે ખુલ્લા છું",
+  "iampoliticallyrelated":"હું રાજકીય રીતે સંબંધિત છું",
+
+
+
+  "nomineeDetails":"નોમિની વિગતો",
+  "nomineeName":"નોમિનીનું નામ",
+  "relation":"સંબંધ",
+
+
+
+  "iFSCCode":"આઈએફએસસી કોડ",
+  "bankName":"બેંકનું નામ",
+  "branch":"શાખા",
+  "accountNumber":"ખાતા નંબર",
+  "reenterAccountNumber":"એકાઉન્ટ નંબર ફરીથી દાખલ કરો",
+  "selectaccounttype":"ખાતાનો પ્રકાર પસંદ કરો",
+  "current":"ચાલુ",
+  "saving":"બચત",
+
+
+
+  "uploadBankProof":"બેંક પ્રૂફ અપલોડ કરો",
+  "selectthedocumentyouwillupload":"તમે અપલોડ કરશો તે દસ્તાવેજ પસંદ કરો",
+  "cancelCheque":"રદ ચેક",
+  "bankStatement":"બેંક સ્ટેટમેન્ટ",
+  "ourteamwillverifyyourbank":"તમે અપલોડ કરશો તે બેંક દસ્તાવેજના પુરાવામાંથી અમારી ટીમ તમારી બેંક વિગતોની ચકાસણી કરશે. કૃપા કરીને તમારું નામ, IFSC કોડ, બેંક એકાઉન્ટ નંબર અને બેંક વિગતો જેવી તમામ વિગતો સાથે સ્પષ્ટ છબી અપલોડ કરો અથવા કેપ્ચર કરો.",
+  "chqorbankstatementproof":"બેંક સ્ટેટમેન્ટ પ્રૂફ માટે તપાસો",
+  "gallery":"ગેલેરી",
+  "camera":"કેમેરા",
+
+
+
+  "uploadSignature":"સહી અપલોડ કરો",
+  "signinthespaceprovided":"આપેલી જગ્યામાં સાઇન ઇન કરો.",
+  "confirm&Proceed":"પુષ્ટિ કરો અને આગળ વધો",
+
+  "iagreethatIamaIndiancitizenresidinginIndia":"હું સંમત છું કે હું ભારતમાં રહેતો ભારતીય નાગરિક છું. હું કન્ફર્મ કરું છું કે અપલોડ કરાયેલ બેંક વિગતો અને દસ્તાવેજ મારા છે. તમામ વ્યવહારો અને રિડેમ્પશન આ બેંક ખાતામાં હશે. મારા ફોર્મમાં કોઈપણ વિસંગતતાના કિસ્સામાં, હું જરૂરિયાત મુજબ સંબંધિત દસ્તાવેજો સબમિટ કરીશ.",
+
+
+  "returnsText":"પરત",
+  "assetAllocation":"એસેટ ફાળવણી",
+  "portFolio":"પોર્ટફોલિયો",
+  "ongoingGoals":"ચાલુ લક્ષ્યો.",
+
+
+  "mutualFunds":"મ્યુચ્યુઅલ ફંડ્સ",
+  "equity":"ઇક્વિટી",
+  "hybrid":"વર્ણસંકર",
+  "debt":"દેવું",
+  "commodities":"ચીજવસ્તુઓ",
+  "largeCap":"લાર્જ કેપ",
+  "midCap":"મિડ કેપ",
+  "smallCap":"સ્મોલકેપ",
+  "indexFund":"ઈન્ડેક્સ ફંડ",
+  "globalFund":"વૈશ્વિક ફંડ",
+  "viewMore":"વધુ જોવો",
+  "bestSIPFunds":"શ્રેષ્ઠ એસઆઈપી ફંડ્સ",
+  "basedonlast5yearsreturn":"છેલ્લા 5 વર્ષના વળતર પર આધારિત",
+  "startSIPwith₹100":"₹100 થી SIP\nશરૂ કરો",
+  "betterthanFD":"FD કરતાં વધુ સારું",
+  "taxsavingfunds":"કર બચત ભંડોળ",
+  "investmentsachet":"ઇન્વેસ્ટમેન્ટ સેશેટ",
+  "saving":"બચત",
+  "growth":"વૃદ્ધિ",
+  "vision":"દ્રષ્ટિ",
+
+
+
+
+  "nAV":"NAV",
+  "minSIP":"લઘુત્તમ એસઆઈપી",
+  "investnow":"રોકાણ કરો",
+  "filterOption":"ફિલ્ટર વિકલ્પ",
+  "minimumSIPInvestment":"ન્યૂનતમ SIP રોકાણ",
+  "investmentOption":"રોકાણનો વિકલ્પ",
+  "mutualFundCompanies":"મ્યુચ્યુઅલ ફંડ કંપનીઓ",
+
+
+
+  "onetime":"એક વાર",
+  "investmentAmount":"રોકાણની રકમ",
+  "minimumInvestment":"ન્યૂનતમ રોકાણ",
+  "installments":"હપ્તા",
+  "untillCancelled":"રદ ન થાય ત્યાં સુધી",
+  "recommended":"ભલામણ કરેલ",
+  "custom":"કસ્ટમ",
+  "addtocart":"સૂચી માં સામેલ કરો",
+  "proceed":"આગળ વધો",
+  "fundsaddedtocart":"ભંડોળ કાર્ટમાં ઉમેર્યું",
+  "continuetoinvestinmorefundsorelseproceed":"વધુ ફંડમાં રોકાણ કરવાનું ચાલુ રાખો અથવા તો આગળ વધો",
+  "confirm":"કન્ફર્મ",
+
+
+
+  "allocation":"ફાળવણી",
+  "selectSIPInvestment":"SIP રોકાણ પસંદ કરો",
+
+
+  "digitalGold":"ડિજિટલ સોનું",
+  "poweredby":"દ્વારા સંચાલિત",
+  "purity":"24K99.9 શુદ્ધતા",
+  "purchasegoldforaslowas":"ઓછા ₹1માં સોનું ખરીદો",
+  "secured&insuredinLocker":"લોકરમાં 100% સુરક્ષિત અને વીમો",
+  "convertyourgoldgramsingoldcoins":"તમારા ગોલ્ડ ગ્રામ સોનાના સિક્કામાં રૂપાંતર કરો",
+  "buyinrupees":"રૂપિયામાં ખરીદો",
+  "buyingrams":"ગ્રામમાં ખરીદો",
+  "gms":"ગ્રામ",
+  "livebuyprice":"લાઈવ ખરીદ કિંમત",
+  "pricevalidfor":"માટે માન્ય કિંમત",
+  "buy":"ખરીદો",
+  "locker":"લોકર",
+
+
+  "cart":"કાર્ટ",
+  "sIPAmount":"SIP રકમ",
+  "selectSIPdate":"SIP તારીખ પસંદ કરો",
+  "sIPon":"SIP ચાલુ",
+  "foliono":"ફોલિયો નં",
+  "seefunds":"ભંડોળ જુઓ",
+  "growthSachet":"વૃદ્ધિ સેચેટ",
+  "placeorder":"ઓર્ડર કરો",
+  "calenderselecttrayfrombottom":"કૅલેન્ડર નીચેથી ટ્રે પસંદ કરો",
+
+
+
+  "setupyourAutopay":"તમારું ઑટોપે સેટ કરો",
+  "clickpaywillautomateyourinvestmentsfromyourregisteredbankaccount":"ક્લિકપે (આદેશ) તમારા રજિસ્ટર્ડ બેંક ખાતામાંથી તમારા રોકાણોને સ્વચાલિત કરશે.",
+  "yourbankdetails":"તમારી બેંક વિગતો",
+  "maximumautodebitlimit":"મહત્તમ ઓટો ડેબિટ મર્યાદા",
+  "donthaveaccesstoonlinebanking":"ઓનલાઈન બેંકિંગની ઍક્સેસ નથી?",
+  "toCreateofflineautopay":"ઑફલાઇન ઑટોપે બનાવવા માટે",
+  "createAutopay":"આપોઆપ ચુકવણી બનાવો",
+
+
+
+  "automatefutureSIPinstallments":"ભાવિ SIP હપ્તા સ્વચાલિત કરો",
+  "singleclickbuttonforfutureinvestment":"ભાવિ રોકાણ માટે સિંગલ ક્લિક બટન",
+  "noinvestmentswithoutyourapproval":"તમારી મંજૂરી વિના કોઈ રોકાણ નહીં",
+
+
+  "exampleYoudecidetoinvest":"ઉદાહરણ: તમે દર મહિને ₹10,000નું રોકાણ મ્યુચ્યુઅલફંડ દ્વારા SIP કરવાનું નક્કી કરો છો.",
+  "yousetautodebitlimitas":"તમે ઓટો-ડેબિટ મર્યાદા ₹1,00,000 તરીકે સેટ કરો છો. દર મહિને ફક્ત તમારી પસંદ કરેલી SIP રકમ ₹10,000 તમારા બેંક ખાતામાંથી ડેબિટ થાય છે.",
+  "nowinfutureifyouwanttoincreaseyourSIP":"હવે ભવિષ્યમાં જો તમે તમારી SIP વધારવા માંગતા હોવ તો .જો તમારી SIP રકમ તમારી મંજૂર આદેશ મર્યાદા સુધી હોય તો કોઈ નવો આદેશ બનાવવાની જરૂર નથી અથવા આદેશની મંજૂરીની કોઈ નવી પ્રક્રિયા કરવાની નથી.",
+
+  "mandateidcreatedsuccessfully":"મેન્ડેટ આઈડી સફળતાપૂર્વક બનાવવામાં આવી",
+  "yourbanksupportselectronicautopay":"તમારી બેંક સપોર્ટ ઇલેક્ટ્રોનિક ઓટોપે. કોઈ કાગળની જરૂર નથી.",
+  "youareallsettostartyourinvestingtoday":"તમે આજે જ તમારું રોકાણ શરૂ કરવા માટે તૈયાર છો.",
+
+  "yourmandateissafe&secured":"તમારો આદેશ સલામત અને સુરક્ષિત છે",
+
+
+
+  "totalpayable":"કુલ ચૂકવવાપાત્ર",
+  "yourBankAccount":"તમારું બેંક ખાતું",
+  "paymentModes":"ચુકવણી સ્થિતિઓ",
+  "netBanking":"નેટબેંકીંગ",
+  "mandate":"આદેશ",
+  "entertheUPIID:":"UPI ID દાખલ કરો",
+  "paynow":"હવે પૈસા આપો",
+
+  "myOrders":"મારા ઓર્ડર્સ",
+  "orderStatus":"ઓર્ડર સ્થિતિ",
+  "redeem":"રિડીમ કરો",
+
+
+  "inProcess":"પ્રક્રિયામાં",
+  "holiday-Goa":"રજા-ગોવા",
+  "onetime":"એક વાર",
+  "orderplacedonmoneyphiBSE":"મનીફી BSE પર ઓર્ડર આપવામાં આવ્યો",
+  "orderID":"ઓર્ડર આઈડી",
+  "paymentReceivedviaUPI":"UPI દ્વારા ચુકવણી પ્રાપ્ત થઈ",
+  "debitfromxxxx1234AxisBank":"xxxx1234 AxisBank માંથી ડેબિટ",
+  "unitsAllocation":"એકમ ફાળવણી",
+  "expectedby":"દ્વારા અપેક્ષિત",
+
+
+  "success":"સફળતા",
+  "noGoal":"કોઈ ધ્યેય નથી",
+  "paymentReceived":"ચુકવણી પ્રાપ્ત થઈ",
+  "unitsAlloted":"ફાળવેલ એકમો",
+  "allotedon":"પર ફાળવેલ છે",
+  "units":"એકમો",
+
+
+
+  "orderplacedonmoneyphi":"મનીફી પર ઓર્ડર આપવામાં આવ્યો",
+  "sIPRegistered":"SIP રજિસ્ટર્ડ",
+  "autopay":"ઓટોપે",
+  "sIPDate":"SIP તારીખ",
+  "nextduedateon":"આગામી નિયત તારીખ",
+
+  "redemptionRequested":"વિમોચન વિનંતી",
+  "amountCredited":"જમા રકમ",
+  "bankdetails":"બેંકની વિગત",
+  "withdarwal":"ઉપાડ",
+
+  "goals":"ધ્યેય",
+  "orders":"ઓર્ડર",
+  "insights":"આંતરદૃષ્ટિ",
+  "invested":"રોકાણ કર્યું",
+  "return":"વળતર%",
+  "viewDetails":"વિગતો જુઓ",
+  "investMore":"વધુ રોકાણ કરો",
+
+  "fundDetails":"ફંડની વિગતો",
+  "statement":"નિવેદન",
+  "avgBuyingNav":"સરેરાશ ખરીદી Nav",
+  "currentNAV":"વર્તમાન એનએવી",
+  "transactions":"વ્યવહારો",
+  "recentTranscations":"તાજેતરના વ્યવહારો",
+  "installmentmissed":"બીજો હપ્તો ચૂકી ગયો",
+  "firstInstallmentPaid":"1 લ હપ્તો ચૂકવવામાં આવ્યો",
+  "nextduedate":"આગામી નિયત તારીખ",
+  "invest":"રોકાણ કરો",
+
+  "pause":"વિરામ",
+  "stopSIP":"SIP બંધ કરો",
+  "additional":"વધારાનુ",
+  "redemption":"વિમોચન",
+  "full":"સંપૂર્ણ",
+  "partial":"આંશિક",
+  "withdraw":"ઉપાડો",
+  "goldGrams":"ગોલ્ડ ગ્રામ",
+  "digitalGold":"ડિજિટલ ગોલ્ડ",
+
+  "areyousureyouwanttocancelyourSIP":"શું તમે ખાતરી કરો છો કે તમે તમારી એસઆઈપીને રદ કરવા માંગો છો",
+  "havequestionsAskus":"પ્રશ્નો છે? અમને પૂછો",
+  "cancel":"રદ કરો",
+  "youwillmissyourgoaltargetforthefollowinggoals":"તમે તમારા ધ્યેયને નીચેના ધ્યેયો માટે લક્ષ્‍ય કરવાનું ચૂકશો.",
+  "sIPPause":"SIP થોભો",
+  "cancelSIP":"SIP રદ કરો",
+  "aunthenciatetocancelyourSIP":"તમારી SIP રદ કરવા માટે પ્રમાણિત કરો",
+  "oTP":"ઓટીપી",
+  "didnotreceiveOTP":"ઓટીપી મળ્યો નથી?",
+  "retry":"ફરી પ્રયાસ કરો",
+  "fullRedemption":"સંપૂર્ણ વિમોચન",
+  "exitLoad":"લોડમાંથી બહાર નીકળો",
+  "ifredeemedbefore365days":"જો 365 દિવસ પહેલાં રિડીમ કરવામાં આવે તો 1%.",
+  "ifredeemedbefore720days":"જો 720 દિવસ પહેલા રિડીમ કરવામાં આવે તો 0.5%",
+  "pleasedonotrefreshortaponbackbutton":"મહેરબાની કરીને રીફ્રેશ કરશો નહીં અથવા બેક બટન પર ટેપ કરશો નહીં",
+  "mutualfundDetails":"મ્યુચ્યુઅલ ફંડ વિગતો",
+  "riskVeryHighRisk":"જોખમ:ખૂબ ઉચ્ચ જોખમ",
+  "dayChange":"1 દિવસ બદલો",
+  "disclamier":"અસ્વીકરણ: ઉપરોક્ત આલેખ એ વિવિધ રોકાણ ઉત્પાદનો સામેની સરખામણી છે જે બચત ખાતું અથવા ફિક્સ ડિપોઝિટ જેવા ફિક્સ અને બાંયધરીકૃત વળતર ઓફર કરી શકે છે.મ્યુચ્યુઅલ ફંડ રિટર્નસારેનોટગુર્નેટેડ અને વિષયો-માર્કેટ્રીસ્ક. રોકાણ કરતા પહેલા સ્કીમ સાથે સંબંધિત દસ્તાવેજો કાળજીપૂર્વક વાંચો. પાસ્ટ પરફોર્મન્સ નોટાગુરન્ટીઓફ્યુચર રિટર્ન.",
+  "savingaccount":"બચત ખાતું",
+  "fixedDeposit":"ફિક્સ્ડ ડિપોઝિટ",
+  "thisFund":"આ ફંડ",
+  "fundPerformance":"ફંડ કામગીરી",
+  "sIPReturns":"SIP રિટર્ન્સ",
+  "onetimereturns":"એક વખત પરત",
+  "schemeDetails":"યોજનાની વિગતો",
+  "aMCInformation":"એએમસી માહિતી",
+  "fundSize":"ફંડસાઇઝ",
+  "benchmark":"આધારચિહ્ન",
+  "expenseRatio":"ખર્ચ ગુણોત્તર",
+  "fundLaunch":"ફંડ લૉન્ચ",
+  "exitLoad":"એક્ઝિટલોડ",
+  "lockin":"લોક-ઇન",
+  "minimumInvestment":"ન્યૂનતમ રોકાણ",
+  "schemeDocuments":"યોજના દસ્તાવેજો",
+  "lumpsum":"લમ્પસમ",
+  "comparisonwithotherLargecapfunds":"અન્ય લાર્જ કેપ ફંડ્સ સાથે સરખામણી",
+  "totalAUM":"કુલ AUM",
+  "noofSchemes":"યોજનાઓની સંખ્યા",
+  "seeall":"બધા જુઓ"
+}

@@ -1,0 +1,3 @@
+class CountryDataModel {
+  String? name;
+}

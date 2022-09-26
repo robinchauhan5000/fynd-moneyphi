@@ -1,0 +1,210 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:moneyphi/theme/theme.dart';
+import 'package:moneyphi/utils/SizeConfig.dart';
+
+import '../../../widgets/funds_page_tile.dart';
+import '../../funds_details_screen/funds_detailed_screen.dart';
+
+class StartSIP extends StatelessWidget {
+  const StartSIP({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    SizeConfig().init(context);
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        leading: BackButton(
+          color: Theme.of(context).textTheme.headline3?.color,
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        centerTitle: true,
+        actions: [
+          Tooltip(
+            child: Container(
+              margin: EdgeInsets.symmetric(horizontal: 5),
+              height: 30,
+              width: 30,
+              alignment: Alignment.center,
+              decoration:
+                  BoxDecoration(shape: BoxShape.circle, color: Colors.blue),
+              child: Text('?'),
+            ),
+            message: "Click here",
+          )
+        ],
+      ),
+      body: Container(
+        margin: EdgeInsets.symmetric(horizontal: 10),
+        child: Column(
+          children: [
+            IntrinsicHeight(
+              child: Container(
+                padding: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                    boxShadow: [mainboxshadow],
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10)),
+                child: Row(
+                  children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          'assets/icons8-garden-96 1.png',
+                          width: 100,
+                        ),
+                        Text(
+                          AppLocalizations.of(context)!.startSIPwith,
+                          style: TextStyle(
+                              fontSize: SizeConfig.blockSizeHorizontal * 6,
+                              fontWeight: FontWeight.bold),
+                        )
+                      ],
+                    ),
+                    Expanded(
+                      child: Column(
+                        children: [
+                          Container(
+                            margin: EdgeInsets.symmetric(horizontal: 10),
+                            alignment: Alignment.center,
+                            width: double.infinity,
+                            padding: EdgeInsets.all(15),
+                            decoration: BoxDecoration(
+                              color: Color(0xff3DE08B).withOpacity(0.5),
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Text('Start small, build big'),
+                          ),
+                          SizedBox(
+                            height: 5,
+                          ),
+                          Container(
+                            margin: EdgeInsets.symmetric(horizontal: 10),
+                            alignment: Alignment.center,
+                            width: double.infinity,
+                            padding: EdgeInsets.all(15),
+                            decoration: BoxDecoration(
+                              color: Color(0xff3DE08B).withOpacity(0.5),
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Text('Helps you to build small goals'),
+                          ),
+                          SizedBox(
+                            height: 5,
+                          ),
+                          Container(
+                            margin: EdgeInsets.symmetric(horizontal: 10),
+                            alignment: Alignment.center,
+                            width: double.infinity,
+                            padding: EdgeInsets.all(15),
+                            decoration: BoxDecoration(
+                              color: Color(0xff3DE08B).withOpacity(0.5),
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Text('Ideal for beginners'),
+                          ),
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ),
+            Expanded(
+              child: ListView(
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => FundsDetailedScreen()),
+                      );
+                    },
+                    child: FundsPageTile(),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => FundsDetailedScreen()),
+                      );
+                    },
+                    child: FundsPageTile(),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => FundsDetailedScreen()),
+                      );
+                    },
+                    child: FundsPageTile(),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => FundsDetailedScreen()),
+                      );
+                    },
+                    child: FundsPageTile(),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => FundsDetailedScreen()),
+                      );
+                    },
+                    child: FundsPageTile(),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => FundsDetailedScreen()),
+                      );
+                    },
+                    child: FundsPageTile(),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => FundsDetailedScreen()),
+                      );
+                    },
+                    child: FundsPageTile(),
+                  ),
+                ],
+              ),
+            )
+          ],
+        ),
+      ),
+      floatingActionButton: Container(
+        padding: EdgeInsets.all(10),
+        decoration: BoxDecoration(
+            color: Color(0xffC4C4C4), borderRadius: BorderRadius.circular(10)),
+        child: Icon(
+          Icons.filter_alt_sharp,
+          color: Colors.blue,
+          size: 30,
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+    );
+  }
+}
