@@ -4,6 +4,7 @@ import 'package:moneyphi/controller/PortfolioController.dart';
 import 'package:moneyphi/screens/portfolio/portfolio_transaction_screen.dart';
 import 'package:provider/provider.dart';
 
+import '../../Model/PortfolioModal.dart';
 import '../../theme/theme.dart';
 import '../../utils/Colors.dart';
 import '../../utils/SizeConfig.dart';
@@ -20,16 +21,13 @@ class _PortfolioState extends State<Portfolio> {
 
   @override
   void initState() {
-    portfolioController =
-        Provider.of<PortfolioController>(context, listen: false);
-    portfolioController?.getDashboard(context);
-
-    Future.delayed(
-        Duration(seconds: 5),
-        () => {
-              print("portfolioController?.portfolioModal?.totalIrr"),
-              print(portfolioController?.portfolioModal?.totalIrr)
-            });
+    Future.delayed(Duration(milliseconds: 100), () {
+      portfolioController =
+          Provider.of<PortfolioController>(context, listen: false);
+      portfolioController?.getPortfolioDetails(context);
+      print("portfolioController?.portfolioModal?.totalIrr");
+      print(portfolioController?.portfolioModal?.totalIrr);
+    });
     super.initState();
   }
 
@@ -53,85 +51,102 @@ class _PortfolioState extends State<Portfolio> {
                       borderRadius: BorderRadius.only(
                           bottomLeft: Radius.circular(20),
                           bottomRight: Radius.circular(20))),
-                  child: Column(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Column(
-                            children: [
-                              const Text(
-                                'Portfolio',
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              Text(
-                                "${rupeeSymbol}5,36,058",
+                  child: Consumer<PortfolioController>(
+                      builder: (context, controller, child) {
+                    return Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Column(
+                              children: [
+                                Text(
+                                  'Portfolio',
+                                  style: TextStyle(
+                                      fontSize:
+                                          SizeConfig.blockSizeHorizontal * 8,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Text(
+                                  "${controller.portfolioModal?.totalCurrentValue}",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w800,
+                                      fontSize: 20),
+                                ),
+                              ],
+                            ),
+                            Container(
+                              decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(10),
+                                  boxShadow: [mainboxshadow]),
+                              padding: EdgeInsets.all(15),
+                              child: Text(
+                                "Mutual Funds",
                                 style: TextStyle(
                                     color: appColorPrimary,
                                     fontWeight: FontWeight.w800,
                                     fontSize: 20),
                               ),
-                            ],
-                          ),
-                          Container(
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(10),
-                                boxShadow: [mainboxshadow]),
-                            padding: EdgeInsets.all(15),
-                            child: Text(
-                              "Mutual Funds",
-                              style: TextStyle(
-                                  color: appColorPrimary,
-                                  fontWeight: FontWeight.w800,
-                                  fontSize: 20),
+                            )
+                          ],
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Row(
+                          children: [
+                            Column(
+                              children: [
+                                Text(
+                                  "Investment",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                SizedBox(
+                                  height: 20,
+                                ),
+                                Text(
+                                  "${controller.portfolioModal?.totalInvestment?.toStringAsFixed(2)}",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w800),
+                                ),
+                              ],
                             ),
-                          )
-                        ],
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      Row(
-                        children: [
-                          Column(
-                            children: [
-                              Text(
-                                "Investment",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              Text(
-                                "3,90,000",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w800),
-                              ),
-                            ],
-                          ),
-                          Column(
-                            children: [
-                              Text(
-                                "XIRR",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              Text(
-                                "14,78%",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w800),
-                              ),
-                            ],
-                          ),
-                        ],
-                      )
-                    ],
-                  ),
+                            SizedBox(
+                              width: 30,
+                            ),
+                            Column(
+                              children: [
+                                Text(
+                                  "XIRR",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                SizedBox(
+                                  height: 20,
+                                ),
+                                Text(
+                                  "${controller.portfolioModal?.totalIrr?.toStringAsFixed(2)}",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w800),
+                                ),
+                              ],
+                            ),
+                          ],
+                        )
+                      ],
+                    );
+                  }),
                 ),
                 Positioned(
                   bottom: -20,
@@ -192,14 +207,17 @@ class _PortfolioState extends State<Portfolio> {
             SizedBox(
               height: 50,
             ),
-            Expanded(
-              flex: 1,
-              child: ListView.builder(
-                  physics: NeverScrollableScrollPhysics(),
-                  itemCount: 7,
-                  itemBuilder: (context, index) {
-                    return fundCard();
-                  }),
+            Container(
+              height: SizeConfig.screenHeight * 0.355,
+              child: Consumer<PortfolioController>(
+                  builder: (context, controller, child) {
+                return ListView.builder(
+                    itemCount: controller.portfolioModal?.funds?.length,
+                    itemBuilder: (context, index) {
+                      return fundCard(
+                          data: controller.portfolioModal?.funds?[index]);
+                    });
+              }),
             )
           ],
         ),
@@ -207,11 +225,15 @@ class _PortfolioState extends State<Portfolio> {
     ));
   }
 
-  fundCard() {
+  fundCard({Funds? data}) {
     return GestureDetector(
       onTap: () {
-        Navigator.push(context,
-            MaterialPageRoute(builder: (context) => PortFolioTransactions()));
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => PortFolioTransactions(
+                      fundID: data?.fundObj?.id,
+                    )));
       },
       child: Container(
         margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
@@ -232,7 +254,7 @@ class _PortfolioState extends State<Portfolio> {
                   child: Image.asset('images/icici.png', fit: BoxFit.cover),
                 ),
                 Text(
-                  "ICICI Prudential Emerging Blue Chip",
+                  data?.fundObj?.name ?? "",
                   style: TextStyle(
                       fontSize: SizeConfig.screenHeight * 0.017,
                       fontWeight: FontWeight.bold),
@@ -281,7 +303,7 @@ class _PortfolioState extends State<Portfolio> {
                     SizedBox(
                       height: 5,
                     ),
-                    Text("${rupeeSymbol}45,000")
+                    Text("${rupeeSymbol}${data?.formattedTotalAmount}")
                   ],
                 ),
                 Column(
@@ -293,7 +315,7 @@ class _PortfolioState extends State<Portfolio> {
                     SizedBox(
                       height: 5,
                     ),
-                    Text("${rupeeSymbol}60,000")
+                    Text("${rupeeSymbol}${data?.formattedCurrentValue}")
                   ],
                 ),
                 Column(
@@ -306,7 +328,7 @@ class _PortfolioState extends State<Portfolio> {
                       height: 5,
                     ),
                     Text(
-                      "12.67%",
+                      "${data?.irr}",
                       style: TextStyle(color: appColorPrimary),
                     )
                   ],

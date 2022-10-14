@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:moneyphi/controller/MutualFundsController.dart';
+import 'package:moneyphi/controller/check_out_controller.dart';
 import 'package:moneyphi/controller/dashBoardController.dart';
 import 'package:moneyphi/screens/kycFoms/bscPersonalDetails.dart';
 import 'package:moneyphi/screens/kycFoms/panCardFormScreen.dart';
 import 'package:moneyphi/theme/theme.dart';
 import 'package:moneyphi/utils/AppSnackBar.dart';
+import 'package:moneyphi/utils/Colors.dart';
 import 'package:moneyphi/utils/SizeConfig.dart';
 import 'package:provider/provider.dart';
 
@@ -22,6 +24,7 @@ class _CartPageListState extends State<CartPageList> {
   MutualFundsController? mutualFundsController;
   DashBoardController? dashBoardController;
   Fund? fundModel;
+  GetBankDetailsController? getBankDetailsController;
 
   @override
   void initState() {
@@ -31,6 +34,13 @@ class _CartPageListState extends State<CartPageList> {
         Provider.of<DashBoardController>(context, listen: false);
     Future.delayed(Duration(milliseconds: 100),
         () => {mutualFundsController!.getCartList(context)});
+    getBankDetailsController =
+        Provider.of<GetBankDetailsController>(context, listen: false);
+    getBankDetailsController!.getBankDetails(context);
+
+    print(
+        "getBankDetailsController!.getBankDetailsModel!.mandatesData[0].bseMandateId");
+    print(getBankDetailsController!.getBankDetailsModel!.mandatesData.length);
     super.initState();
   }
 
@@ -178,11 +188,7 @@ class _CartPageListState extends State<CartPageList> {
                                       if (dashBoardController
                                               ?.getProfileModel?.isKycDone ==
                                           0) {
-                                        Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                                builder: (context) =>
-                                                    PanCardFormScreen()));
+                                        showDialogBox(context);
                                       } else if (dashBoardController
                                                   ?.getProfileModel
                                                   ?.isBseClientCreated !=
@@ -238,4 +244,103 @@ class _CartPageListState extends State<CartPageList> {
       // floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
+
+  showDialogBox(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Welcome'),
+          content: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  TextButton(onPressed: () {}, child: const Text('Cancel'))
+                ],
+              ),
+              const Text("Hi investor, it seems you havent \n"
+                  "completed your KYC/Onboarding."),
+              SizedBox(height: 25),
+              const Text("As per SEBI Norms all investors have \n"
+                  "to complete KYC process to invest in \n mutual funds."),
+              SizedBox(height: 25),
+              Container(
+                  height: size.height * 0.05,
+                  width: size.width * 0.6,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      color: Colors.green),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => PanCardFormScreen()));
+                    },
+                    child: const Center(
+                      child: Text(
+                        'Complete Onboarding',
+                        style: TextStyle(
+                            color: Colors.white, fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                  ))
+            ],
+          ),
+          actions: [
+            // FlatButton(
+            //   textColor: Colors.black,
+            //   onPressed: () {
+            //     Navigator.pop(context);
+            //   },
+            //   child: const Text('CANCEL'),
+            // ),
+            TextButton(
+              onPressed: () {},
+              child: const Text(
+                'ACCEPT',
+                style: TextStyle(color: appColorPrimary),
+              ),
+            ),
+          ],
+        );
+      },
+    );
+  }
+// showwDialogBox(BuildContext context){
+//   Size size = MediaQuery.of(context).size;
+//   showDialog(
+//     context: context,
+//     builder: (BuildContext context) {
+//       return AlertDialog(
+//         title: const Text('Welcome'),
+//         content:Column(
+//           children: [
+//             Row(
+//               mainAxisAlignment: MainAxisAlignment.end,
+//               children: [
+//                 TextButton(onPressed: (){}, child:const Text('back',style: TextStyle(color: Colors.black),))
+//               ],
+//             ),
+//             const Text("Onboarding & KYC \n FA'Q's",textAlign: TextAlign.center,),
+//             const Text('1. Why should i provide my Pan Card No?'),
+//             SizedBox(height: size.height*0.03),
+//             const Text("Ans SEBI has made Pan Card details mendoety\n for inverstors who wish to invest in mutual funds"),
+//             SizedBox(height: size.height*0.03),
+//             const Text("2. Why should i provide my personal details?"),
+//             SizedBox(height: size.height*0.03),
+//             const Text("Ans. We require some of your personal details\n like : Name,DOB,email id, mobile no. etc.\n"
+//                 "This details are required by mutual fund\n companies , RTA's & BSE in line with SEBI norms."),
+//             SizedBox(height: size.height*0.03),
+//             const Text("3. Is my Data safe?"),
+//
+//           ],
+//         ),
+//
+//       );
+//     },
+//   );
+// }
 }

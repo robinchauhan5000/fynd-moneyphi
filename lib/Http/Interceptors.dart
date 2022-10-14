@@ -14,7 +14,7 @@ class HttpService {
 
   HttpService() {
     _dio = Dio(BaseOptions(
-      baseUrl: "https://stag.app.moneyphi.com/api",
+      baseUrl: "https://stage.app.investifyd.com/api/",
       responseType: ResponseType.json,
       connectTimeout: 100000,
       receiveTimeout: 30000,

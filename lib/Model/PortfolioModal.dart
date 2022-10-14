@@ -1,6 +1,6 @@
 class PortfolioModal {
   List<Funds>? funds;
-  int? totalInvestment;
+  double? totalInvestment;
   double? totalCurrentValue;
   String? formattedTotalInvestment;
   String? formattedCurrentValue;
@@ -52,7 +52,7 @@ class PortfolioModal {
 
 class Funds {
   String? isin;
-  int? totalAmount;
+  double? totalAmount;
   double? totalUnits;
   List<String>? exitLoad;
   double? currentValue;
@@ -299,9 +299,9 @@ class GoalBinded {
 }
 
 class CategoryPercent {
-  int? equity;
-  int? hybrid;
-  int? debt;
+  double? equity;
+  double? hybrid;
+  double? debt;
 
   CategoryPercent({this.equity, this.hybrid, this.debt});
 

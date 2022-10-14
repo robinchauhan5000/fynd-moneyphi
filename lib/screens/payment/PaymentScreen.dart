@@ -38,6 +38,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
   void initState() {
     super.initState();
     // Future.delayed(Duration(milliseconds: 200), () {
+
     mutualFundsController =
         Provider.of<MutualFundsController>(context, listen: false);
     paymentController = Provider.of<PaymentController>(context, listen: false);
@@ -46,7 +47,9 @@ class _PaymentScreenState extends State<PaymentScreen> {
     getBankDetailsController!.getBankDetails(context);
     cartData = mutualFundsController!.getCartListModel;
     // });
-    print("bscID");
+    print(
+        "getBankDetailsController!.getBankDetailsModel!.mandatesData[0].bseMandateId");
+    print(getBankDetailsController!.getBankDetailsModel!.mandatesData.length);
 
     // print(getBankDetailsController!
     //     .getBankDetailsModel!.mandatesData[0].bseMandateId);
@@ -207,7 +210,11 @@ class _PaymentScreenState extends State<PaymentScreen> {
                       .getBankDetailsModel!.mandatesData[0].bseMandateId
                   // getBankDetailsC ontroller!.getBankDetailsModel!.mandatesData[i].bseMandateId
                   );
+              print("Out res");
+              print(res);
               if (res!.statusCode == 200) {
+                print("res");
+                print(res);
                 Navigator.push(
                     context,
                     MaterialPageRoute(
