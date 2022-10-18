@@ -1,5 +1,8 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
+
 import './PaymentSucessfulScreen.dart';
 // import 'package:webview_flutter_plus/webview_flutter_plus.dart';
 
@@ -18,8 +21,7 @@ class _BankTransitState extends State<BankTransit> {
   @override
   void initState() {
     super.initState();
-    // if (Platform.isAndroid)
-    // WebView.platform = SurfaceAndroidWebView(); // <<== THIS
+    if (Platform.isAndroid) WebView.platform = SurfaceAndroidWebView();
   }
 
   @override
@@ -39,6 +41,7 @@ class _BankTransitState extends State<BankTransit> {
                 controller.loadFile(widget.htmlData.toString());
                 _controller = controller;
               },
+              // initialUrl: "http://127.0.0.1:5500/",
               javascriptMode: JavascriptMode.unrestricted,
               navigationDelegate: (NavigationRequest request) {
                 if (request.url

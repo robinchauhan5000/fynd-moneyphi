@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:moneyphi/controller/PortfolioController.dart';
 import 'package:moneyphi/screens/portfolio/sip_portfolio_details.dart';
-import 'package:moneyphi/utils/Colors.dart';
+import 'package:moneyphi/theme/theme.dart';
 import 'package:moneyphi/utils/SizeConfig.dart';
 import 'package:provider/provider.dart';
 
@@ -39,7 +39,7 @@ class _PortFolioTransactionsState extends State<PortFolioTransactions> {
           Consumer<PortfolioController>(builder: (context, controller, child) {
         return Column(
           children: [
-            fundCard(size, controller, context),
+            FundDetailedCard(size, controller, context),
             SizedBox(
               height: size.height * 0.01,
             ),
@@ -76,10 +76,14 @@ class _PortFolioTransactionsState extends State<PortFolioTransactions> {
     );
   }
 
-  Card transactionCard(PortfolioController controller, int index, Size size) {
-    return Card(
-      elevation: 10,
-      // shadowColor: Colors.greenAccent,
+  transactionCard(PortfolioController controller, int index, Size size) {
+    return Container(
+      margin: EdgeInsets.all(10),
+      padding: EdgeInsets.all(10),
+      decoration: BoxDecoration(
+          boxShadow: [mainboxshadow],
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(10)),
       child: Column(
         children: [
           Row(
@@ -116,6 +120,8 @@ class _PortFolioTransactionsState extends State<PortFolioTransactions> {
             children: [
               SizedBox(width: size.width * 0.075),
               Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Text(
                     "Invested",
@@ -123,6 +129,9 @@ class _PortFolioTransactionsState extends State<PortFolioTransactions> {
                         color: Colors.grey,
                         //fontSize: size.height * 0.016,
                         fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(
+                    height: 10,
                   ),
                   Text(
                     r'$45,000',
@@ -134,11 +143,16 @@ class _PortFolioTransactionsState extends State<PortFolioTransactions> {
               ),
               SizedBox(width: size.width * 0.18),
               Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Text(
                     "Current Value",
                     style: TextStyle(
                         color: Colors.grey, fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(
+                    height: 10,
                   ),
                   Text(
                     r'$60,000',
@@ -150,11 +164,16 @@ class _PortFolioTransactionsState extends State<PortFolioTransactions> {
               ),
               SizedBox(width: size.width * 0.13),
               Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Text(
                     "Return%",
                     style: TextStyle(
                         color: Colors.grey, fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(
+                    height: 10,
                   ),
                   Text(
                     r'12.67%',
@@ -178,6 +197,8 @@ class _PortFolioTransactionsState extends State<PortFolioTransactions> {
             children: [
               SizedBox(width: size.width * 0.075),
               Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Text(
                     "Avg Buying Nav",
@@ -185,6 +206,9 @@ class _PortFolioTransactionsState extends State<PortFolioTransactions> {
                         color: Colors.grey,
                         //fontSize: size.height * 0.016,
                         fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(
+                    height: 10,
                   ),
                   Text(
                     r'$45,000',
@@ -196,11 +220,16 @@ class _PortFolioTransactionsState extends State<PortFolioTransactions> {
               ),
               SizedBox(width: size.width * 0.08),
               Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Text(
                     "Current NAV",
                     style: TextStyle(
                         color: Colors.grey, fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(
+                    height: 10,
                   ),
                   Text(
                     r'$60,000',
@@ -212,11 +241,16 @@ class _PortFolioTransactionsState extends State<PortFolioTransactions> {
               ),
               SizedBox(width: size.width * 0.15),
               Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Text(
                     "Units",
                     style: TextStyle(
                         color: Colors.grey, fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(
+                    height: 10,
                   ),
                   Text(
                     controller.portfolioTransactionModel!.data!
@@ -231,36 +265,20 @@ class _PortFolioTransactionsState extends State<PortFolioTransactions> {
               ),
             ],
           ),
-          SizedBox(height: size.height * 0.02),
-          Row(
-            //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              SizedBox(width: size.width * 0.075),
-              Text(
-                r'$45,000',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold, fontSize: size.height * 0.016),
-              ),
-              SizedBox(width: size.width * 0.26),
-              Text(
-                r'$60,000',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold, fontSize: size.height * 0.016),
-              ),
-              SizedBox(width: size.width * 0.19),
-             
-            ],
-          ),
-          SizedBox(height: size.height * 0.02),
         ],
       ),
     );
   }
 
-  Card fundCard(
+  FundDetailedCard(
       Size size, PortfolioController controller, BuildContext context) {
-    return Card(
-      elevation: 10,
+    return Container(
+      margin: EdgeInsets.all(10),
+      padding: EdgeInsets.all(10),
+      decoration: BoxDecoration(
+          boxShadow: [mainboxshadow],
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(10)),
       child: Column(
         children: [
           Row(
@@ -273,10 +291,20 @@ class _PortFolioTransactionsState extends State<PortFolioTransactions> {
                 child: Image.asset('images/icici.png', fit: BoxFit.cover),
               ),
               SizedBox(width: size.width * 0.05),
-              Text(
-                controller.portfolioTransactionModel!.data!.fund!.name!,
-                style: TextStyle(
-                    fontSize: size.height * 0.02, fontWeight: FontWeight.bold),
+              Container(
+                width: controller
+                        .portfolioTransactionModel!.data!.fund!.name!.length /
+                    10 *
+                    35,
+                child: Text(
+                  controller.portfolioTransactionModel!.data!.fund!.name!,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  softWrap: false,
+                  style: TextStyle(
+                      fontSize: size.height * 0.02,
+                      fontWeight: FontWeight.bold),
+                ),
               ),
               SizedBox(width: size.width * 0.08),
               PopupMenuButton(
@@ -334,11 +362,6 @@ class _PortFolioTransactionsState extends State<PortFolioTransactions> {
               ),
             ],
           ),
-          /*Row(children: [
-                        SizedBox(width: size.width*0.13),
-                        Text("Equity/Large cap",style: TextStyle(color: Colors.grey,
-                        fontSize:size.height*0.015 ),)
-                      ],),*/
           Divider(
             thickness: 1.5,
             height: 10,
@@ -348,51 +371,73 @@ class _PortFolioTransactionsState extends State<PortFolioTransactions> {
             //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               SizedBox(width: size.width * 0.075),
-              const Text(
-                "Invested",
-                style: TextStyle(
-                    color: Colors.grey,
-                    //fontSize: size.height * 0.016,
-                    fontWeight: FontWeight.bold),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    "Invested",
+                    style: TextStyle(
+                        color: Colors.grey,
+                        //fontSize: size.height * 0.016,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    controller.portfolioTransactionModel!.data!.fund!
+                        .formattedTotalInvestment!,
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: size.height * 0.016),
+                  ),
+                ],
               ),
               SizedBox(width: size.width * 0.18),
-              const Text(
-                "Current Value",
-                style:
-                    TextStyle(color: Colors.grey, fontWeight: FontWeight.bold),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    "Current Value",
+                    style: TextStyle(
+                        color: Colors.grey, fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    controller.portfolioTransactionModel!.data!.fund!
+                        .formattedTotalMarketValue!,
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: size.height * 0.016),
+                  ),
+                ],
               ),
               SizedBox(width: size.width * 0.13),
-              const Text(
-                "Return%",
-                style:
-                    TextStyle(color: Colors.grey, fontWeight: FontWeight.bold),
-              ),
-            ],
-          ),
-          SizedBox(height: size.height * 0.02),
-          Row(
-            //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              SizedBox(width: size.width * 0.075),
-              Text(
-                "${rupeeSymbol}${controller.portfolioTransactionModel!.data!.fund!.totalInvestment}",
-                style: TextStyle(
-                    fontWeight: FontWeight.bold, fontSize: size.height * 0.016),
-              ),
-              SizedBox(width: size.width * 0.26),
-              Text(
-                "${controller.portfolioTransactionModel!.data!.fund?.formattedTotalMarketValue}",
-                style: TextStyle(
-                    fontWeight: FontWeight.bold, fontSize: size.height * 0.016),
-              ),
-              SizedBox(width: size.width * 0.19),
-              Text(
-                controller.portfolioTransactionModel!.data!.fund!.irr
-                    .toString(),
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.greenAccent,
-                    fontSize: size.height * 0.016),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    "Return%",
+                    style: TextStyle(
+                        color: Colors.grey, fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    controller.portfolioTransactionModel!.data!.fund!.irr
+                        .toString(),
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.greenAccent,
+                        fontSize: size.height * 0.016),
+                  ),
+                ],
               ),
             ],
           ),
@@ -406,54 +451,76 @@ class _PortFolioTransactionsState extends State<PortFolioTransactions> {
             //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               SizedBox(width: size.width * 0.075),
-              const Text(
-                "Avg Buying Nav",
-                style: TextStyle(
-                    color: Colors.grey,
-                    //fontSize: size.height * 0.016,
-                    fontWeight: FontWeight.bold),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    "Avg Buying Nav",
+                    style: TextStyle(
+                        color: Colors.grey,
+                        //fontSize: size.height * 0.016,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    controller.portfolioTransactionModel!.data!.fund!
+                        .formattedTotalInvestment!,
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: size.height * 0.016),
+                  ),
+                ],
               ),
               SizedBox(width: size.width * 0.08),
-              const Text(
-                "Current NAV",
-                style:
-                    TextStyle(color: Colors.grey, fontWeight: FontWeight.bold),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    "Current NAV",
+                    style: TextStyle(
+                        color: Colors.grey, fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    controller
+                        .portfolioTransactionModel!.data!.fund!.formattedNav!,
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: size.height * 0.016),
+                  ),
+                ],
               ),
               SizedBox(width: size.width * 0.15),
-              const Text(
-                "Units",
-                style:
-                    TextStyle(color: Colors.grey, fontWeight: FontWeight.bold),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    "Units",
+                    style: TextStyle(
+                        color: Colors.grey, fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    controller.portfolioTransactionModel!.data!.fund!.totalUnits
+                        .toString(),
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.greenAccent,
+                        fontSize: size.height * 0.016),
+                  ),
+                ],
               ),
             ],
           ),
-          SizedBox(height: size.height * 0.02),
-          Row(
-            //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              SizedBox(width: size.width * 0.075),
-              Text(
-                "${rupeeSymbol}${controller.portfolioTransactionModel!.data!.fund!.minRedemptionAmount}",
-                style: TextStyle(
-                    fontWeight: FontWeight.bold, fontSize: size.height * 0.016),
-              ),
-              SizedBox(width: size.width * 0.26),
-              Text(
-                "${rupeeSymbol}${controller.portfolioTransactionModel!.data!.fund!.nav}",
-                style: TextStyle(
-                    fontWeight: FontWeight.bold, fontSize: size.height * 0.016),
-              ),
-              SizedBox(width: size.width * 0.19),
-              Text(
-                "${rupeeSymbol}${controller.portfolioTransactionModel!.data!.fund!.totalUnits}",
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.greenAccent,
-                    fontSize: size.height * 0.016),
-              ),
-            ],
-          ),
-          SizedBox(height: size.height * 0.02),
         ],
       ),
     );

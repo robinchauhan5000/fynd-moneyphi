@@ -10,6 +10,7 @@ import 'package:moneyphi/screens/cart_page/cart_page_list.dart';
 import 'package:moneyphi/screens/create_goals/create_goals.dart';
 import 'package:moneyphi/screens/kycFoms/panCardFormScreen.dart';
 import 'package:moneyphi/screens/mutual_funds/iam_beginner/IAmBiggnerScreen.dart';
+import 'package:moneyphi/screens/profile/main_profile.dart';
 import 'package:moneyphi/theme/bloc/theme_cubit.dart';
 import 'package:moneyphi/theme/theme.dart';
 import 'package:moneyphi/utils/Colors.dart';
@@ -169,16 +170,25 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: <Widget>[
-                                      Container(
-                                        alignment: Alignment.center,
-                                        margin: EdgeInsets.only(right: 10),
-                                        decoration: BoxDecoration(
-                                            shape: BoxShape.circle,
-                                            color: Color(0xffF5EEE5)),
-                                        child: Icon(
-                                          Icons.person,
-                                          size: 50,
-                                          color: Color(0xffF2CEA5),
+                                      GestureDetector(
+                                        onTap: () => {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      MainProfile()))
+                                        },
+                                        child: Container(
+                                          alignment: Alignment.center,
+                                          margin: EdgeInsets.only(right: 10),
+                                          decoration: BoxDecoration(
+                                              shape: BoxShape.circle,
+                                              color: Color(0xffF5EEE5)),
+                                          child: Icon(
+                                            Icons.person,
+                                            size: 50,
+                                            color: Color(0xffF2CEA5),
+                                          ),
                                         ),
                                       ),
                                       profile.cartCount == 0
