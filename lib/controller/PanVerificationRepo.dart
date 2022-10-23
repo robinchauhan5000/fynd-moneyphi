@@ -45,7 +45,7 @@ class PanVerificationRepo {
     var token = preferences.get('token').toString();
     try {
       Response response = await post(
-        Uri.parse('https://stag.app.moneyphi.com/api/ins/mftrans/checkkyc'),
+        Uri.parse('${BaseUrl}ins/mftrans/checkkyc'),
         body: json.encode({"pan": panNumber}),
         headers: {
           "Content-Type": "application/json",
@@ -78,6 +78,7 @@ class PanVerificationRepo {
           'x-access-token': '$token',
         },
       );
+      print("2-1");
       print(response.statusCode);
       if (response.statusCode == 200) {
         return jsonDecode(response.body);
@@ -92,12 +93,13 @@ class PanVerificationRepo {
 
   Future<dynamic?> partTwoTwo(
       {required PartTwoTwoModel partTwoTwoModel}) async {
+    print("partTwoTwo");
     SharedPreferences preferences = await SharedPreferences.getInstance();
     var token = preferences.get('token').toString();
     print(partTwoTwoModelToJson(partTwoTwoModel));
     try {
       Response response = await post(
-        Uri.parse('https://stag.app.moneyphi.com/api/ins/mftrans/part2-2'),
+        Uri.parse('${BaseUrl}ins/mftrans/part2-2'),
         body: partTwoTwoModelToJson(partTwoTwoModel),
         headers: {
           "Content-Type": "application/json",
@@ -118,11 +120,12 @@ class PanVerificationRepo {
 
   Future<dynamic?> partTwoThree(
       {required PartTwoThreeModel partTwoThreeModel}) async {
+    print("partTwoThree");
     SharedPreferences preferences = await SharedPreferences.getInstance();
     var token = preferences.get('token').toString();
     try {
       Response response = await post(
-        Uri.parse('https://stag.app.moneyphi.com/api/ins/mftrans/part2-3'),
+        Uri.parse('${BaseUrl}ins/mftrans/part2-3'),
         body: partTwoThreeModelToJson(partTwoThreeModel),
         headers: {
           "Content-Type": "application/json",
@@ -142,11 +145,12 @@ class PanVerificationRepo {
   }
 
   Future<dynamic?> partTwoFive() async {
+    print("partTwoFive");
     SharedPreferences preferences = await SharedPreferences.getInstance();
     var token = preferences.get('token').toString();
     try {
       Response response = await post(
-        Uri.parse('https://stag.app.moneyphi.com/api/ins/mftrans/part2-5'),
+        Uri.parse('${BaseUrl}ins/mftrans/part2-5'),
         headers: {
           "Content-Type": "application/json",
           'x-access-token': '$token',

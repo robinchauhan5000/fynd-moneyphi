@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:moneyphi/screens/kycFoms/singnatureScreen.dart';
+import 'package:moneyphi/utils/AppSnackBar.dart';
 import 'package:moneyphi/utils/SizeConfig.dart';
 import 'package:provider/provider.dart';
 
@@ -152,12 +153,18 @@ class _UploadBankProofState extends State<UploadBankProof> {
                 ),
                 MoneyPhiButton(
                   onClick: () {
-                    imagePicker.sendImageServer(imagePicker.images!, context,
-                        typeOfAccountList[0] == true ? "cheque" : "cheque");
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => SignatureScreen()));
+                    if (imagePicker.images != null) {
+                      imagePicker.sendImageServer(imagePicker.images!, context,
+                          typeOfAccountList[0] == true ? "cheque" : "cheque");
+
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => SignatureScreen()));
+                    } else {
+                      appSnackBar(
+                          content: "Please Select Images", context: context);
+                    }
                   },
                   buttonTitle: "Submit",
                 )

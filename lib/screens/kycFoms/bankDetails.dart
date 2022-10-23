@@ -144,7 +144,7 @@ class _BankDetailsState extends State<BankDetails> {
                         child: TextFormField(
                           obscureText: showPass,
                           controller: controller.accountNumberController,
-                          maxLength: 12,
+                          // maxLength: 15,
                           keyboardType: TextInputType.number,
                           decoration: InputDecoration(
                               label: Text(
@@ -192,7 +192,7 @@ class _BankDetailsState extends State<BankDetails> {
                         controller: controller.reaccountNumberController,
                         tooltipActive: false,
                         onChange: (e) {},
-                        maxLength: 12,
+                        // maxLength: 12,
                         textInputType: TextInputType.number,
                         validator: (text) {
                           if (text == null || text.isEmpty) {

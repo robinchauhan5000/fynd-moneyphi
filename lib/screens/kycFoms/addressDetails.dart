@@ -33,9 +33,9 @@ class _AddressDetailsState extends State<AddressDetails> {
   late Country _statecurrentSelectedValue;
   late Country _countrycurrentSelectedValue;
 
-  String addressTypeValue = preAddressType!;
-  String stateValue = preState!;
-  String countryValue = preCountry!;
+  String addressTypeValue = preAddressType ?? "";
+  String stateValue = preState ?? "";
+  String countryValue = preCountry ?? "";
 
   static String _displayStringForOption(Country option) => option.name;
 

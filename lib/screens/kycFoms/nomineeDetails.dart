@@ -12,7 +12,6 @@ import 'package:moneyphi/widgets/moneyPhiButton.dart';
 
 import '../../Model/KycFormModel/PartTwoOneModel.dart';
 import 'bankDetails.dart';
-import 'bscPersonalDetails.dart';
 
 TextEditingController? nomineeNameCodeController = TextEditingController();
 TextEditingController? guardianController = TextEditingController();
@@ -28,17 +27,15 @@ class NomineeDetails extends StatefulWidget {
 
 class _NomineeDetailsState extends State<NomineeDetails> {
   DateTime selectedDob = DateTime.now();
-  var _Relation = [
-    "Mother",
-    "Brother",
-    "Sister",
-    "Father",
-  ];
+  var _Relation = ["Mother", "Brother", "Sister", "Father", "Wife"];
 
-  String _currentSelectedValue = preNomineeRelation!;
+  String? _currentSelectedValue;
 
   @override
   void initState() {
+    print("kjrefgjrtjdol$preNomineeRelation");
+    _currentSelectedValue = preNomineeRelation ?? "Wife";
+    setState(() {});
     super.initState();
   }
 
@@ -79,7 +76,7 @@ class _NomineeDetailsState extends State<NomineeDetails> {
     print('dobNominee');
     print(dobMain);
     print('dobNominee');
-    print(dob!.text);
+    print(_currentSelectedValue);
     print('dobNominee');
     print(dobNominee.text);
     SizeConfig().init(context);
@@ -177,7 +174,7 @@ class _NomineeDetailsState extends State<NomineeDetails> {
                                   _currentSelectedValue = newValue!;
                                 });
                               },
-                              value: _currentSelectedValue.isNotEmpty
+                              value: _currentSelectedValue!.isNotEmpty
                                   ? _currentSelectedValue
                                   : null,
                               items: _Relation.map((value) {
@@ -192,6 +189,28 @@ class _NomineeDetailsState extends State<NomineeDetails> {
                       },
                     ),
                   ),
+                  // DropdownButton(
+                  //   // Initial Value
+                  //   value: _currentSelectedValue,
+                  //
+                  //   // Down Arrow Icon
+                  //   icon: const Icon(Icons.keyboard_arrow_down),
+                  //
+                  //   // Array list of items
+                  //   items: _Relation.map((String items) {
+                  //     return DropdownMenuItem(
+                  //       value: items,
+                  //       child: Text(items),
+                  //     );
+                  //   }).toList(),
+                  //   // After selecting the desired option,it will
+                  //   // change button value to selected value
+                  //   onChanged: (newValue) {
+                  //     setState(() {
+                  //       _currentSelectedValue = newValue.toString();
+                  //     });
+                  //   },
+                  // ),
                 ],
               ),
             ),
@@ -219,7 +238,7 @@ class _NomineeDetailsState extends State<NomineeDetails> {
             onClick: () => {
               model = PartTwoThreeModel(
                   nomineeName: nomineeNameCodeController!.text,
-                  nomineeRelation: _currentSelectedValue,
+                  nomineeRelation: _currentSelectedValue ?? "",
                   nomineeDob: DateTime.parse(dobNominee.text),
                   nomineeGuardian: guardianController!.text),
               context.read<PartTwoThreeCubit>().postPartTwoOneKyc(model!),

@@ -25,8 +25,8 @@ class ProfessionDetails extends StatefulWidget {
 }
 
 class _ProfessionDetailsState extends State<ProfessionDetails> {
-  String occupationValue = preOccupation!;
-  String birthCountryalue = preBirthCountry!;
+  String occupationValue = "";
+  String birthCountryalue = "";
 
   final _formKey = GlobalKey<FormState>();
 
@@ -35,33 +35,79 @@ class _ProfessionDetailsState extends State<ProfessionDetails> {
 
   @override
   void initState() {
-    if (preBirthCountry != null || preOccupation != null) {
-      _occupationCurrentSelectedValue = BlocProvider.of<BscCodeBloc>(context)
-          .state
-          .bscCodeModel
-          ?.data
-          .occupation
-          .where((element) => element.id == preOccupation)
-          .toList()
-          .first;
+    print("preOccupation");
+    print(preOccupation);
+    print("preBirthCountry");
+    print(preBirthCountry);
+    BscCodeBloc bscCodeBloc;
+    Future.delayed(Duration(milliseconds: 100), () {
+      setState(() {
+        occupationValue = preOccupation!;
+        birthCountryalue = preBirthCountry!;
+        birthCountryController = TextEditingController(text: preBirthCountry!);
+        bscCodeBloc = BlocProvider.of<BscCodeBloc>(context);
+        bscCodeBloc.state.bscCodeModel?.data.occupation.forEach((element) {
+          if (preOccupation == element.id) {
+            _occupationCurrentSelectedValue = element;
+          }
+        });
+      });
+    });
 
-      _birthCountryCurrentSelectedValue = BlocProvider.of<BscCodeBloc>(context)
-          .state
-          .bscCodeModel!
-          .data
-          .country
-          .where((element) => element.id == preBirthCountry)
-          .toList()
-          .first;
-    }
+    setState(() {});
+    // if (preBirthCountry != null || preOccupation != null) {
+    //   _occupationCurrentSelectedValue = BlocProvider.of<BscCodeBloc>(context)
+    //       .state
+    //       .bscCodeModel
+    //       ?.data
+    //       .occupation
+    //       .where((element) => element.id == preOccupation)
+    //       .toList()
+    //       .first;
+    //
+    //   _birthCountryCurrentSelectedValue = BlocProvider.of<BscCodeBloc>(context)
+    //       .state
+    //       .bscCodeModel!
+    //       .data
+    //       .country
+    //       .where((element) => element.id == preBirthCountry)
+    //       .toList()
+    //       .first;
+    // }
     super.initState();
   }
+
+  // @override
+  // void initState() {
+  //   if (preBirthCountry != null || preOccupation != null) {
+  //     _occupationCurrentSelectedValue = BlocProvider.of<BscCodeBloc>(context)
+  //         .state
+  //         .bscCodeModel
+  //         ?.data
+  //         .occupation
+  //         .where((element) => element.id == preOccupation)
+  //         .toList()
+  //         .first;
+  //
+  //     _birthCountryCurrentSelectedValue = BlocProvider.of<BscCodeBloc>(context)
+  //         .state
+  //         .bscCodeModel!
+  //         .data
+  //         .country
+  //         .where((element) => element.id == preBirthCountry)
+  //         .toList()
+  //         .first;
+  //   }
+  //   super.initState();
+  // }
 
   static String _displayStringForOption(Country option) => option.name;
 
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
+    print("birthCountryController?.text");
+    print(birthCountryController?.text);
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -155,16 +201,6 @@ class _ProfessionDetailsState extends State<ProfessionDetails> {
                       SizedBox(
                         height: 10,
                       ),
-                      // CustomTextField(
-                      //   label: AppLocalizations.of(context)!.incomeDetails,
-                      //   hint: AppLocalizations.of(context)!.incomeDetails,
-                      //   controller: incomeController,
-                      //   tooltipActive: false,
-                      //   onChange: (e) {},
-                      // ),
-                      // SizedBox(
-                      //   height: 10,
-                      // ),
                       CustomTextField(
                         label: AppLocalizations.of(context)!.birthPlace,
                         hint: AppLocalizations.of(context)!.birthPlace,
@@ -200,8 +236,8 @@ class _ProfessionDetailsState extends State<ProfessionDetails> {
                             birthCountryalue = selection.id.toString();
                           });
                         },
-                        initialValue: TextEditingValue(
-                            text: _birthCountryCurrentSelectedValue!.name),
+                        initialValue:
+                            TextEditingValue(text: preBirthCountry ?? ""),
                         fieldViewBuilder: (context, controller, focusNode,
                             onEditingComplete) {
                           birthCountryController = controller;
