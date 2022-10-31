@@ -173,7 +173,7 @@ class _UploadBankProofState extends State<UploadBankProof> {
           ),
         ),
       ),
-      // bottomNavigationBar: Row(
+      // bottomNavigationBar: Row(+
       //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       //   children: [
       //     GestureDetector(

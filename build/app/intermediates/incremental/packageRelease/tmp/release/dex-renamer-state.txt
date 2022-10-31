@@ -1,4 +1,4 @@
-#Thu Sep 01 22:25:04 IST 2022
-base.0=C\:\\Users\\robin\\AndroidStudioProjects\\moneyphi-master\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
+#Wed Oct 26 21:56:50 IST 2022
+base.0=D\:\\Moneyphi\\fyd-mobile-app\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

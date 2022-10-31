@@ -36,6 +36,7 @@ Referenced Strings:
   ActivityFilter
   ActivityRule
   ApertureValue
+  AppBundleLocaleChanges
   AppLifecycleState.detached
   AppLifecycleState.inactive
   AppLifecycleState.paused
@@ -47,6 +48,7 @@ Referenced Strings:
   BITMAP
   BITMAP_MASKABLE
   BLOCKING
+  BOLD_TEXT
   BOTH
   BOTTOM_OVERLAYS
   BYTE
@@ -225,8 +227,8 @@ Referenced Strings:
   HAS_ENABLED_STATE
   HAS_IMPLICIT_SCROLLING
   HAS_TOGGLED_STATE
-  HC_PLATFORM_VIEW
   HEAVY_IMPACT
+  HIGH_CONTRAST
   HINGE
   HORIZONTAL
   HapticFeedback.vibrate
@@ -260,6 +262,7 @@ Referenced Strings:
   IS_KEYBOARD_KEY
   IS_LINK
   IS_LIVE_REGION
+  IS_MULTILINE
   IS_OBSCURED
   IS_READ_ONLY
   IS_SELECTED
@@ -336,6 +339,7 @@ Referenced Strings:
   ON_ANY
   ON_CREATE
   ON_DESTROY
+  ON_OFF_SWITCH_LABELS
   ON_PAUSE
   ON_RESUME
   ON_START
@@ -371,6 +375,7 @@ Referenced Strings:
   PASTE
   PENTAX
   PHONE
+  PHYSICAL_DISPLAY_PLATFORM_VIEW
   PLAIN_TEXT
   POLL_FAILED
   PORTRAIT_DOWN
@@ -389,16 +394,17 @@ Referenced Strings:
   PlanarConfiguration
   PlatformChannel
   PlatformPlugin
+  PlatformViewWrapper
   PlatformViewsChannel
   PlatformViewsController
   PreviewImageLength
   PreviewImageStart
   PrimaryChromaticities
-  PrivateApi
   R:
   REAR
   RECEIVE_HTTP_ERROR
   RECEIVE_WEB_RESOURCE_ERROR
+  REDUCE_MOTION
   REMOVED_TASK
   REMOVE_FROZEN
   RESOURCE
@@ -472,6 +478,8 @@ Referenced Strings:
   Software
   SpatialFrequencyResponse
   SpectralSensitivity
+  SpellCheck.initiateSpellCheck
+  SpellCheckChannel
   SplitPairFilter
   SplitPairRule
   SplitPlaceholderRule
@@ -489,6 +497,7 @@ Referenced Strings:
   SubjectDistance
   SubjectDistanceRange
   SubjectLocation
+  SwitchIntDef
   SyntheticAccessor
   SystemChannel
   SystemChrome.restoreSystemUIOverlays
@@ -580,11 +589,11 @@ Referenced Strings:
   UnknownNullness
   UserComment
   V:
-  VD_PLATFORM_VIEW
   VERTICAL
   VGhpcyBpcyB0aGUgcHJlZml4IGZvciBCaWdJb...
   VGhpcyBpcyB0aGUgcHJlZml4IGZvciBEb3VibGUu
   VGhpcyBpcyB0aGUgcHJlZml4IGZvciBhIGxpc3Qu
+  VIRTUAL_DISPLAY_PLATFORM_VIEW
   VISIBLE_PASSWORD
   VISUAL_STATE_CALLBACK
   VISUAL_STATE_CALLBACK_FEATURE
@@ -706,6 +715,7 @@ Referenced Strings:
   blockingTasksInBuffer
   boolean
   bounds
+  brieflyShowPassword
   buffer
   byte
   cache
@@ -730,6 +740,7 @@ Referenced Strings:
   codePoint
   collect
   collection
+  com.google.android.inputmethod.latin
   commit
   commonPool
   comparator
@@ -761,6 +772,7 @@ Referenced Strings:
   creditCardSecurityCode
   currentDisplay
   dark
+  dart_entrypoint_args
   data
   decimal
   decorate
@@ -872,6 +884,7 @@ Referenced Strings:
   extendedPostalCode
   extensionCallback
   extent
+  false
   familyName
   feature
   feature.rect
@@ -888,6 +901,7 @@ Referenced Strings:
   flutter/accessibility
   flutter/deferredcomponent
   flutter/isolate
+  flutter/keydata
   flutter/keyevent
   flutter/lifecycle
   flutter/localization
@@ -897,6 +911,7 @@ Referenced Strings:
   flutter/platform_views
   flutter/restoration
   flutter/settings
+  flutter/spellcheck
   flutter/system
   flutter/textinput
   flutter_assets
@@ -969,8 +984,11 @@ Referenced Strings:
   intent
   invokeSuspend
   io.flutter.Entrypoint
+  io.flutter.EntrypointUri
   io.flutter.InitialRoute
+  io.flutter.embedding.android.EnableIm...
   io.flutter.embedding.android.EnableSk...
+  io.flutter.embedding.android.LeakVM
   io.flutter.embedding.android.NormalTheme
   io.flutter.embedding.android.OldGenHe...
   io.flutter.embedding.android.SplashSc...
@@ -1014,6 +1032,9 @@ Referenced Strings:
   java.util.concurrent.ForkJoinPool
   job
   jpg
+  kDown
+  kRepeat
+  kUp
   key
   keyCode
   keydown
@@ -1114,6 +1135,7 @@ Referenced Strings:
   name
   namePrefix
   nameSuffix
+  nativeSpellCheckServiceDefined
   navigation_bar_height
   newConfig
   newDeviceState
@@ -1132,6 +1154,7 @@ Referenced Strings:
   oemFeature
   oemFeature.bounds
   off
+  offset
   oldText
   on
   onActivityResult
@@ -1208,7 +1231,6 @@ Referenced Strings:
   primaryColor
   primitiveFqNames.values
   producerIndex
-  productId
   push
   pushRoute
   put
@@ -1274,6 +1296,7 @@ Referenced Strings:
   setStringList
   short
   show
+  show_password
   sidecarAdapter
   sidecarCompat
   sidecarDeviceState
@@ -1311,18 +1334,21 @@ Referenced Strings:
   text/plain
   textCapitalization
   textScaleFactor
+  textservices
   texture
   this$0
   throwableMethods
   tmp
   token
   tooltip
+  top
   touch
   tracker
   transform
   transformer
   transition_animation_scale
   transparent
+  true
   truncated
   type
   uninstallDeferredComponent
@@ -1332,7 +1358,6 @@ Referenced Strings:
   username
   usesVirtualDisplay
   value
-  vendorId
   verticalText
   video
   view

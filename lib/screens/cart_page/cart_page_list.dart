@@ -38,9 +38,6 @@ class _CartPageListState extends State<CartPageList> {
         Provider.of<GetBankDetailsController>(context, listen: false);
     getBankDetailsController!.getBankDetails(context);
 
-    print(
-        "getBankDetailsController!.getBankDetailsModel!.mandatesData[0].bseMandateId");
-    print(getBankDetailsController!.getBankDetailsModel!.mandatesData.length);
     super.initState();
   }
 
@@ -95,72 +92,63 @@ class _CartPageListState extends State<CartPageList> {
                         : Container(
                             child: Column(
                               children: [
-                                for (int i = 0;
-                                    i <
-                                        controller.getCartListModel!.cart!.goals
-                                            .length;
-                                    i++)
-                                  ListView.builder(
-                                      physics: NeverScrollableScrollPhysics(),
-                                      shrinkWrap: true,
-                                      itemCount: controller.getCartListModel
-                                          ?.cart!.goals[i].funds.length,
-                                      itemBuilder: (context, index) {
-                                        return GestureDetector(
-                                          onTap: () {
-                                            // Navigator.push(
-                                            //     context,
-                                            //     MaterialPageRoute(
-                                            //         builder: (context) =>
-                                            //             MandatePage(
-                                            //                 fund: controller
-                                            //                     .getCartListModel
-                                            //                     ?.cart!
-                                            //                     .goals[i])));
-                                          },
-                                          child: CartPageTile(
-                                              folioNumber: controller
-                                                  .getCartListModel
-                                                  ?.cart
-                                                  ?.uniqueFunds
-                                                  .sips[i]
-                                                  .sipDates,
-                                              inputiD: controller
-                                                  .getCartListModel
-                                                  ?.cart!
-                                                  .goals[i]
-                                                  .inputId,
-                                              fundshipId: controller
-                                                  .getCartListModel
-                                                  ?.cart!
-                                                  .goals[i]
-                                                  .funds[index]
-                                                  .fundId,
-                                              fundshipName: controller
-                                                  .getCartListModel
-                                                  ?.cart!
-                                                  .goals[i]
-                                                  .funds[index]
-                                                  .fundName,
-                                              sipAmount: controller
-                                                  .getCartListModel
-                                                  ?.cart!
-                                                  .goals[i]
-                                                  .funds[index]
-                                                  .amount
-                                                  .toString(),
-                                              userInputId: controller
-                                                  .getCartListModel!
-                                                  .cart!
-                                                  .goals[i]
-                                                  .inputId,
-                                              sipDates: controller.getCartListModel!.cart!.goals[i].funds
-                                                  .elementAt(index)
-                                                  .sipDates,
-                                              itemIndex: i,
-                                              investmentType: controller.getCartListModel!.cart!.goals[i].funds.elementAt(index).investmentType),
-                                        );
-                                      }),
+                                ListView.builder(
+                                    physics: NeverScrollableScrollPhysics(),
+                                    shrinkWrap: true,
+                                    itemCount: controller
+                                        .getCartListModel?.cart!.goals.length,
+                                    itemBuilder: (context, index) {
+                                      return GestureDetector(
+                                        onTap: () {
+                                          // Navigator.push(
+                                          //     context,
+                                          //     MaterialPageRoute(
+                                          //         builder: (context) =>
+                                          //             MandatePage(
+                                          //                 fund: controller
+                                          //                     .getCartListModel
+                                          //                     ?.cart!
+                                          //                     .goals[i])));
+                                        },
+                                        child: CartPageTile(
+                                            folioNumber: controller
+                                                .getCartListModel?.cart?.goals
+                                                .elementAt(index)
+                                                .funds[0]
+                                                .sipDates,
+                                            inputiD: controller.getCartListModel?.cart?.goals
+                                                .elementAt(index)
+                                                .inputId,
+                                            fundshipId: controller.getCartListModel?.cart?.goals
+                                                .elementAt(index)
+                                                .funds[0]
+                                                .fundId,
+                                            fundshipName: controller
+                                                .getCartListModel?.cart?.goals
+                                                .elementAt(index)
+                                                .funds[0]
+                                                .fundName,
+                                            sipAmount: controller.getCartListModel?.cart?.goals
+                                                .elementAt(index)
+                                                .funds[0]
+                                                .amount
+                                                .toString(),
+                                            userInputId: controller
+                                                .getCartListModel!
+                                                .cart!
+                                                .goals[index]
+                                                .inputId,
+                                            sipDates: controller
+                                                .getCartListModel!
+                                                .cart!
+                                                .goals[index]
+                                                .funds
+                                                .elementAt(0)
+                                                .sipDates,
+                                            itemIndex: index,
+                                            investmentType: controller.getCartListModel!.cart!.goals[index].funds.elementAt(0).investmentType),
+                                      );
+                                    }),
                                 SizedBox(
                                   height: 30,
                                 ),

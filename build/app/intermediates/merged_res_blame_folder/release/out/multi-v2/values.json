@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\robin\\AndroidStudioProjects\\moneyphi-master\\build\\app\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values\\values.xml",
+            "outputFile": "D:\\Moneyphi\\fyd-mobile-app\\build\\app\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
                     "source": "C:\\Users\\robin\\.gradle\\caches\\transforms-2\\files-2.1\\be6c37f920226f799c8e079c11ae9b32\\core-1.6.0\\res\\values\\values.xml",
@@ -23,6 +23,25 @@
                     }
                 },
                 {
+                    "source": "D:\\Moneyphi\\fyd-mobile-app\\android\\app\\src\\main\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "3,14",
+                        "startColumns": "4,4",
+                        "startOffsets": "173,816",
+                        "endLines": "7,16",
+                        "endColumns": "12,12",
+                        "endOffsets": "465,980"
+                    },
+                    "to": {
+                        "startLines": "93,98",
+                        "startColumns": "4,4",
+                        "startOffsets": "5462,5759",
+                        "endLines": "97,100",
+                        "endColumns": "12,12",
+                        "endOffsets": "5754,5923"
+                    }
+                },
+                {
                     "source": "C:\\Users\\robin\\.gradle\\caches\\transforms-2\\files-2.1\\8bafac36c30506b86a131ad919918c25\\jetified-window-1.0.0-beta04\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,7,8,9,10,11,19,23,34,51",
@@ -39,25 +58,6 @@
                         "endLines": "7,8,9,10,72,121,125,274,291,299",
                         "endColumns": "11,59,51,44,59,24,24,24,24,24",
                         "endOffsets": "289,349,401,446,4387,7238,7435,16396,17510,17903"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\robin\\AndroidStudioProjects\\moneyphi-master\\android\\app\\src\\main\\res\\values\\styles.xml",
-                    "from": {
-                        "startLines": "3,14",
-                        "startColumns": "4,4",
-                        "startOffsets": "173,816",
-                        "endLines": "7,16",
-                        "endColumns": "12,12",
-                        "endOffsets": "465,980"
-                    },
-                    "to": {
-                        "startLines": "93,98",
-                        "startColumns": "4,4",
-                        "startOffsets": "5462,5759",
-                        "endLines": "97,100",
-                        "endColumns": "12,12",
-                        "endOffsets": "5754,5923"
                     }
                 }
             ]

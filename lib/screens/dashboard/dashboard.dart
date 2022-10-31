@@ -344,15 +344,19 @@ class _DashboardScreenState extends State<DashboardScreen> {
                               const SizedBox(
                                 height: 20,
                               ),
-                              Text(
-                                AppLocalizations.of(context)!
-                                    .letyourmoneyworkforyou,
-                                style: TextStyle(
-                                  color: Theme.of(context)
-                                      .textTheme
-                                      .headline3
-                                      ?.color,
-                                  fontSize: SizeConfig.blockSizeHorizontal * 5,
+                              Container(
+                                margin: EdgeInsets.only(left: 6),
+                                child: Text(
+                                  AppLocalizations.of(context)!
+                                      .letyourmoneyworkforyou,
+                                  style: TextStyle(
+                                    color: Theme.of(context)
+                                        .textTheme
+                                        .headline3
+                                        ?.color,
+                                    fontSize:
+                                        SizeConfig.blockSizeHorizontal * 5,
+                                  ),
                                 ),
                               ),
                               SizedBox(
@@ -413,14 +417,18 @@ class _DashboardScreenState extends State<DashboardScreen> {
                               const SizedBox(
                                 height: 20,
                               ),
-                              Text(
-                                AppLocalizations.of(context)!.learnwithphi,
-                                style: TextStyle(
-                                  color: Theme.of(context)
-                                      .textTheme
-                                      .headline3
-                                      ?.color,
-                                  fontSize: SizeConfig.blockSizeHorizontal * 5,
+                              Container(
+                                margin: EdgeInsets.only(left: 6),
+                                child: Text(
+                                  AppLocalizations.of(context)!.learnwithphi,
+                                  style: TextStyle(
+                                    color: Theme.of(context)
+                                        .textTheme
+                                        .headline3
+                                        ?.color,
+                                    fontSize:
+                                        SizeConfig.blockSizeHorizontal * 5,
+                                  ),
                                 ),
                               ),
                               const SizedBox(
@@ -476,16 +484,19 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
                                       children: [
-                                        Text(
-                                          AppLocalizations.of(context)!
-                                              .setupyouraccount,
-                                          style: TextStyle(
-                                              color: Theme.of(context)
-                                                  .textTheme
-                                                  .headline3
-                                                  ?.color,
-                                              fontWeight: FontWeight.w800,
-                                              fontSize: 18),
+                                        Container(
+                                          margin: EdgeInsets.only(left: 6),
+                                          child: Text(
+                                            AppLocalizations.of(context)!
+                                                .setupyouraccount,
+                                            style: TextStyle(
+                                                color: Theme.of(context)
+                                                    .textTheme
+                                                    .headline3
+                                                    ?.color,
+                                                fontWeight: FontWeight.w800,
+                                                fontSize: 18),
+                                          ),
                                         ),
                                         ElevatedButton(
                                           style: ButtonStyle(
@@ -765,7 +776,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
     return Container(
       width: 110,
       height: MediaQuery.of(context).size.height * 0.1,
-      margin: EdgeInsets.symmetric(horizontal: 10),
+      margin: EdgeInsets.symmetric(horizontal: 5),
       padding: EdgeInsets.only(
         bottom: 10,
       ),

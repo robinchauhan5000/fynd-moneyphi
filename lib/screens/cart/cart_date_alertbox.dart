@@ -38,7 +38,16 @@ class _CartDateAlertState extends State<CartDateAlert> {
         Provider.of<PaymentController>(context, listen: false);
     mutualController =
         Provider.of<MutualFundsController>(context, listen: false);
+    getDate();
     super.initState();
+  }
+
+  getDate() async {
+    selectIndex = int.parse(
+            await SharedPref().getString(key: "id${widget.fundshipId}") ??
+                "35") -
+        1;
+    setState(() {});
   }
 
   @override

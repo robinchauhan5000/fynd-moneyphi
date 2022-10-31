@@ -671,6 +671,7 @@ kotlin.sequences.SequencesKt___SequencesKt$minus$1$iterator$1
 kotlinx.coroutines.channels.ChannelsKt__DeprecatedKt$firstOrNull$1
 io.flutter.view.TextureRegistry:
     public abstract io.flutter.view.TextureRegistry$SurfaceTextureEntry registerSurfaceTexture(android.graphics.SurfaceTexture)
+    public void onTrimMemory(int)
 kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest
 androidx.fragment.app.FragmentManager$FragmentLifecycleCallbacks
 kotlin.io.ExposingBufferByteArrayOutputStream
@@ -745,6 +746,9 @@ kotlin.TypeAliasesKt
 kotlin.reflect.KProperty$Accessor
 androidx.core.app.NotificationCompat$BubbleMetadata$Builder
 kotlinx.coroutines.DefaultExecutorKt
+io.flutter.embedding.engine.renderer.FlutterRenderer$SurfaceTextureRegistryEntry:
+    private void removeListener()
+    public void release()
 kotlinx.coroutines.flow.StateFlowImpl$collect$1
 kotlinx.coroutines.channels.BroadcastKt$broadcast$1
 kotlin.reflect.KMutableProperty0$Setter
@@ -892,6 +896,9 @@ io.flutter.embedding.engine.plugins.contentprovider.ContentProviderPluginBinding
     public abstract android.content.ContentProvider getContentProvider()
 kotlinx.coroutines.channels.BroadcastKt$broadcast$$inlined$CoroutineExceptionHandler$1
 androidx.core.location.LocationManagerCompat$PreRGnssStatusTransport
+io.flutter.plugin.platform.VirtualDisplayController:
+    public void dispose()
+    void onFlutterViewDetached()
 kotlinx.coroutines.flow.FlowKt__LimitKt$take$$inlined$unsafeFlow$1
 kotlin.contracts.ContractBuilder
 androidx.core.location.LocationManagerCompat$CancellableLocationListener
@@ -1258,8 +1265,8 @@ kotlin.random.Random:
     public byte[] nextBytes(int)
 kotlin.DeepRecursiveKt
 kotlin.UnsafeLazyImpl
-androidx.core.app.AppLaunchChecker
 kotlinx.coroutines.flow.FlowKt__TransformKt$filterNotNull$$inlined$unsafeTransform$1$2$1
+androidx.core.app.AppLaunchChecker
 kotlin.comparisons.ReversedComparator
 io.flutter.plugin.editing.TextEditingDelta:
     public java.lang.CharSequence getOldText()
@@ -1325,6 +1332,9 @@ kotlinx.coroutines.CoroutineExceptionHandlerKt:
 androidx.core.view.accessibility.AccessibilityNodeProviderCompat
 androidx.annotation.AnimatorRes
 androidx.versionedparcelable.ParcelField
+io.flutter.plugin.platform.PlatformViewWrapper:
+    public android.graphics.SurfaceTexture getTexture()
+    private static final java.lang.String TAG
 androidx.fragment.app.Fragment$OnStartEnterTransitionListener
 kotlin.Metadata$DefaultImpls
 kotlin.internal.DynamicExtension
@@ -1359,8 +1369,8 @@ io.flutter.plugins.webviewflutter.R
 androidx.core.view.ViewCompat$NestedScrollType
 androidx.core.telephony.TelephonyManagerCompat$Api23Impl
 kotlinx.coroutines.flow.FlowKt__DistinctKt$defaultKeySelector$1
-kotlinx.coroutines.AwaitAll$AwaitAllNode
 kotlinx.coroutines.flow.SharedFlowImpl$WhenMappings
+kotlinx.coroutines.AwaitAll$AwaitAllNode
 kotlinx.coroutines.flow.FlowKt__TransformKt$mapNotNull$$inlined$unsafeTransform$1$1
 kotlinx.coroutines.flow.FlowKt__ZipKt$combineUnsafe$1$1
 androidx.fragment.app.FragmentManagerImpl$1
@@ -3412,6 +3422,7 @@ androidx.customview.R$styleable
 androidx.core.content.res.ResourcesCompat$ColorStateListCacheKey
 kotlin.reflect.TypeOfKt
 io.flutter.embedding.engine.FlutterEngineConnectionRegistry:
+    private android.app.Activity attachedActivity()
     public void add(java.util.Set)
     public io.flutter.embedding.engine.plugins.FlutterPlugin get(java.lang.Class)
     public void attachToService(android.app.Service,androidx.lifecycle.Lifecycle,boolean)
@@ -3646,6 +3657,8 @@ kotlin.random.KotlinRandom
 kotlin.collections.SlidingWindowKt
 kotlinx.coroutines.channels.AbstractSendChannel$onSend$1
 kotlinx.coroutines.flow.FlowKt__TransformKt$map$$inlined$unsafeTransform$1$2$1
+io.flutter.embedding.android.KeyEmbedderResponder:
+    private static final java.lang.String TAG
 androidx.core.view.WindowInsetsCompat$TypeImpl30
 kotlin.comparisons.ComparisonsKt__ComparisonsKt$thenBy$2
 kotlinx.coroutines.channels.ChannelsKt__DeprecatedKt$flatMap$1
@@ -3764,13 +3777,13 @@ kotlin.sequences.SequencesKt__SequencesJVMKt:
 androidx.customview.widget.FocusStrategy
 androidx.fragment.app.Fragment$4
 io.flutter.embedding.android.FlutterActivityAndFragmentDelegate$Host:
+    public abstract io.flutter.embedding.android.ExclusiveAppComponent getExclusiveAppComponent()
     public abstract void updateSystemUiOverlays()
 kotlinx.coroutines.test.TestCoroutineContextKt
 io.flutter.embedding.android.AndroidTouchProcessor:
     private static final int POINTER_DATA_FIELD_COUNT
-    private static final int BYTES_PER_FIELD
+    static final int BYTES_PER_FIELD
     private static final int POINTER_DATA_FLAG_BATCHED
-    private static final int _POINTER_BUTTON_PRIMARY
 androidx.core.provider.FontsContractCompat$FontFamilyResult
 kotlin.Deprecated
 androidx.core.R$style
@@ -3788,6 +3801,8 @@ io.flutter.embedding.engine.loader.FlutterLoader:
     private static final java.lang.String TAG
     private static final java.lang.String OLD_GEN_HEAP_SIZE_META_DATA_KEY
     private static final java.lang.String ENABLE_SKPARAGRAPH_META_DATA_KEY
+    private static final java.lang.String ENABLE_IMPELLER_META_DATA_KEY
+    private static final java.lang.String LEAK_VM_META_DATA_KEY
     static final java.lang.String AOT_SHARED_LIBRARY_NAME
     static final java.lang.String AOT_VMSERVICE_SHARED_LIBRARY_NAME
     static final java.lang.String SNAPSHOT_ASSET_PATH_KEY
@@ -3877,6 +3892,9 @@ kotlin.time.TimeMark
 kotlin.jvm.internal.Ref$FloatRef
 android.support.v4.os.IResultReceiver$Default
 io.flutter.embedding.engine.renderer.FlutterRenderer:
+    private void unregisterTexture(long)
+    static synthetic void access$600(io.flutter.embedding.engine.renderer.FlutterRenderer,long)
+    void removeOnTrimMemoryListener(io.flutter.view.TextureRegistry$OnTrimMemoryListener)
     public android.graphics.Bitmap getBitmap()
     public void setAccessibilityFeatures(int)
     public void dispatchSemanticsAction(int,int,java.nio.ByteBuffer,int)
@@ -3890,9 +3908,9 @@ kotlin.sequences.GeneratorSequence
 kotlin.sequences.SequencesKt__SequenceBuilderKt$sequence$$inlined$Sequence$1
 androidx.customview.widget.ExploreByTouchHelper
 androidx.annotation.CheckResult
-io.flutter.embedding.engine.systemchannels.PlatformChannel:
-    private static final java.lang.String TAG
 io.flutter.embedding.engine.systemchannels.PlatformViewsChannel:
+    private static final java.lang.String TAG
+io.flutter.embedding.engine.systemchannels.PlatformChannel:
     private static final java.lang.String TAG
 kotlinx.coroutines.flow.FlowKt__ReduceKt$single$$inlined$collect$1
 kotlin.Suppress
@@ -3979,8 +3997,8 @@ kotlin.system.ProcessKt
 kotlinx.coroutines.flow.FlowKt__EmittersKt$transform$1$invokeSuspend$$inlined$collect$1$1
 androidx.customview.widget.ExploreByTouchHelper$2
 androidx.fragment.app.FragmentFactory
-kotlin.reflect.KProperty2$Getter
 kotlin.jvm.internal.MutablePropertyReference
+kotlin.reflect.KProperty2$Getter
 androidx.viewpager.R$string
 androidx.core.widget.TextViewOnReceiveContentListener$Api16Impl
 io.flutter.plugins.webviewflutter.BuildConfig
@@ -4268,6 +4286,8 @@ kotlin.time.DurationUnitKt
 androidx.versionedparcelable.VersionedParcelize
 androidx.fragment.app.FragmentTransitionCompat21$3
 kotlin.ranges.ClosedRange
+io.flutter.embedding.android.KeyboardMap$2:
+    private static final long serialVersionUID
 kotlin.sequences.TransformingSequence:
     public final kotlin.sequences.Sequence flatten$kotlin_stdlib(kotlin.jvm.functions.Function1)
 io.flutter.embedding.android.FlutterTextureView:
@@ -4390,6 +4410,7 @@ io.flutter.embedding.android.FlutterActivity:
     public static io.flutter.embedding.android.FlutterActivity$NewEngineIntentBuilder withNewEngine()
     public static io.flutter.embedding.android.FlutterActivity$CachedEngineIntentBuilder withCachedEngine(java.lang.String)
     void setDelegate(io.flutter.embedding.android.FlutterActivityAndFragmentDelegate)
+    public io.flutter.embedding.android.ExclusiveAppComponent getExclusiveAppComponent()
     public void updateSystemUiOverlays()
     private static final java.lang.String TAG
 kotlinx.coroutines.selects.SelectBuilderImpl$onTimeout$$inlined$Runnable$1
@@ -4444,6 +4465,8 @@ io.flutter.embedding.engine.FlutterShellArgs:
     public static final java.lang.String ARG_TRACE_SKIA_ALLOWLIST
     public static final java.lang.String ARG_KEY_TRACE_SYSTRACE
     public static final java.lang.String ARG_TRACE_SYSTRACE
+    public static final java.lang.String ARG_KEY_ENABLE_IMPELLER
+    public static final java.lang.String ARG_ENABLE_IMPELLER
     public static final java.lang.String ARG_KEY_DUMP_SHADER_SKP_ON_SHADER_COMPILATION
     public static final java.lang.String ARG_DUMP_SHADER_SKP_ON_SHADER_COMPILATION
     public static final java.lang.String ARG_KEY_CACHE_SKSL
@@ -4456,6 +4479,8 @@ io.flutter.embedding.engine.FlutterShellArgs:
     public static final java.lang.String ARG_OBSERVATORY_PORT
     public static final java.lang.String ARG_KEY_DART_FLAGS
     public static final java.lang.String ARG_DART_FLAGS
+    public static final java.lang.String ARG_KEY_MSAA_SAMPLES
+    public static final java.lang.String ARG_MSAA_SAMPLES
 androidx.core.provider.FontRequestWorker
 androidx.annotation.DeprecatedSinceApi
 kotlinx.coroutines.channels.ChannelsKt__Channels_commonKt$consumeEach$1
@@ -4738,6 +4763,8 @@ androidx.loader.app.LoaderManagerImpl$LoaderViewModel$1
 androidx.versionedparcelable.ParcelUtils
 kotlin.reflect.KType$DefaultImpls
 kotlinx.coroutines.android.HandlerContext$scheduleResumeAfterDelay$$inlined$Runnable$1
+io.flutter.plugin.editing.SpellCheckPlugin:
+    private static final int MAX_SPELL_CHECK_SUGGESTIONS
 kotlin.collections.unsigned.UArraysKt___UArraysJvmKt$asList$4
 kotlin.text.CharsKt:
     private void <init>()
@@ -5237,6 +5264,8 @@ kotlinx.coroutines.AbstractTimeSourceKt:
     private static final void parkNanos(java.lang.Object,long)
     private static final void unpark(java.lang.Thread)
 androidx.core.content.pm.PermissionInfoCompat$Protection
+io.flutter.embedding.android.KeyboardMap$1:
+    private static final long serialVersionUID
 kotlinx.coroutines.LazyDeferredCoroutine
 kotlinx.coroutines.internal.Symbol:
     public final java.lang.String getSymbol()
@@ -5840,6 +5869,8 @@ io.flutter.embedding.engine.systemchannels.SettingsChannel:
     private static final java.lang.String TAG
     public static final java.lang.String CHANNEL_NAME
     private static final java.lang.String TEXT_SCALE_FACTOR
+    private static final java.lang.String NATIVE_SPELL_CHECK_SERVICE_DEFINED
+    private static final java.lang.String BRIEFLY_SHOW_PASSWORD
     private static final java.lang.String ALWAYS_USE_24_HOUR_FORMAT
     private static final java.lang.String PLATFORM_BRIGHTNESS
 kotlin.coroutines.intrinsics.IntrinsicsKt__IntrinsicsJvmKt$createCoroutineUnintercepted$$inlined$createCoroutineFromSuspendFunction$IntrinsicsKt__IntrinsicsJvmKt$1
@@ -6097,6 +6128,7 @@ kotlin.sequences.SequencesKt___SequencesKt:
 androidx.core.graphics.BlendModeColorFilterCompat
 kotlin.sequences.SequencesKt___SequencesKt$groupingBy$1
 io.flutter.embedding.engine.plugins.service.ServiceControlSurface
+io.flutter.embedding.android.FlutterActivityAndFragmentDelegate$DelegateFactory
 kotlinx.coroutines.sync.Mutex
 kotlinx.coroutines.flow.FlowKt__ErrorsKt$catch$$inlined$unsafeFlow$1
 kotlin.text.MatchNamedGroupCollection
@@ -6485,6 +6517,7 @@ io.flutter.plugin.mouse.MouseCursorPlugin$2:
     private static final long serialVersionUID
 androidx.core.view.WindowInsetsAnimationCompat$Impl21$Impl21OnApplyWindowInsetsListener$1
 io.flutter.embedding.engine.dart.DartExecutor:
+    public void executeDartEntrypoint(io.flutter.embedding.engine.dart.DartExecutor$DartEntrypoint)
     public void executeDartCallback(io.flutter.embedding.engine.dart.DartExecutor$DartCallback)
     public io.flutter.plugin.common.BinaryMessenger getBinaryMessenger()
     public io.flutter.plugin.common.BinaryMessenger$TaskQueue makeBackgroundTaskQueue(io.flutter.plugin.common.BinaryMessenger$TaskQueueOptions)
@@ -7137,6 +7170,8 @@ kotlinx.coroutines.selects.SelectInstance
 androidx.fragment.app.FragmentManagerImpl$OpGenerator
 kotlinx.coroutines.BlockingCoroutine
 androidx.core.widget.ScrollerCompat
+io.flutter.util.HandlerCompat:
+    public void <init>()
 kotlin.text.MatchResult$Destructured
 androidx.core.view.TintableBackgroundView
 androidx.core.app.NotificationChannelCompat
@@ -7228,6 +7263,12 @@ kotlin.coroutines.intrinsics.IntrinsicsKt__IntrinsicsKt:
     private static final java.lang.Object suspendCoroutineUninterceptedOrReturn(kotlin.jvm.functions.Function1,kotlin.coroutines.Continuation)
     public static synthetic void getCOROUTINE_SUSPENDED$annotations()
     public void <init>()
+io.flutter.embedding.android.KeyData:
+    public void <init>(java.nio.ByteBuffer)
+    private static final java.lang.String TAG
+    public static final java.lang.String CHANNEL
+    private static final int FIELD_COUNT
+    private static final int BYTES_PER_FIELD
 androidx.loader.content.Loader
 androidx.core.provider.FontRequestWorker$TypefaceResult
 kotlin.collections.AbstractList$Companion
@@ -7289,6 +7330,8 @@ kotlin.collections.AbstractIterator$WhenMappings
 kotlin.reflect.KProperty$Getter
 org.intellij.lang.annotations.JdkConstants$CalendarMonth
 androidx.core.view.MarginLayoutParamsCompat
+io.flutter.view.TextureRegistry$SurfaceTextureEntry:
+    public abstract void release()
 kotlinx.coroutines.ResumeAwaitOnCompletion
 kotlin.collections.CollectionsKt___CollectionsKt$groupingBy$1
 kotlin.jvm.internal.ArrayShortIterator
@@ -7384,6 +7427,8 @@ kotlinx.coroutines.channels.RendezvousChannel:
     protected final boolean isBufferAlwaysFull()
     protected final boolean isBufferFull()
 kotlinx.coroutines.flow.FlowKt__ZipKt$combineTransform$$inlined$combineTransformUnsafe$FlowKt__ZipKt$5$1
+io.flutter.util.TraceSection:
+    public void <init>()
 kotlinx.coroutines.channels.AbstractChannel$Itr:
     public static final synthetic java.lang.Object access$hasNextSuspend(kotlinx.coroutines.channels.AbstractChannel$Itr,kotlin.coroutines.Continuation)
     public synthetic java.lang.Object next(kotlin.coroutines.Continuation)
@@ -8058,7 +8103,6 @@ io.flutter.embedding.engine.systemchannels.MouseCursorChannel:
     private static final java.lang.String TAG
 io.flutter.embedding.engine.dart.DartExecutor$DartEntrypoint:
     public static io.flutter.embedding.engine.dart.DartExecutor$DartEntrypoint createDefault()
-    public void <init>(java.lang.String,java.lang.String,java.lang.String)
 kotlinx.coroutines.FlowPreview
 androidx.fragment.app.ListFragment$1
 kotlin.ArrayIntrinsicsKt
@@ -8169,6 +8213,8 @@ kotlin.text.StringsKt__StringsJVMKt:
     public static final java.util.Comparator getCASE_INSENSITIVE_ORDER(kotlin.jvm.internal.StringCompanionObject)
     public void <init>()
 io.flutter.embedding.engine.plugins.broadcastreceiver.BroadcastReceiverControlSurface
+io.flutter.embedding.engine.systemchannels.SpellCheckChannel:
+    private static final java.lang.String TAG
 androidx.core.view.ViewCompat$4
 androidx.fragment.app.FragmentManagerImpl$2
 io.flutter.embedding.engine.dart.DartMessenger$DefaultTaskQueueFactory:
@@ -8211,6 +8257,11 @@ kotlinx.coroutines.CompletedContinuation:
     public final kotlin.jvm.functions.Function1 component3()
     public final java.lang.Object component4()
     public final java.lang.Throwable component5()
+io.flutter.embedding.android.KeyboardMap:
+    public void <init>()
+    public static final long kValueMask
+    public static final long kUnicodePlane
+    public static final long kAndroidPlane
 io.flutter.plugins.sharedpreferences.R$color
 kotlin.jvm.functions.Function13:
     public abstract java.lang.Object invoke(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)
@@ -8436,6 +8487,8 @@ androidx.core.view.WindowInsetsControllerCompat:
     public static final int BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
 androidx.activity.R$layout
 kotlin.RequiresOptIn
+io.flutter.embedding.android.KeyData$Type:
+    static io.flutter.embedding.android.KeyData$Type fromLong(long)
 androidx.viewpager.R$style
 androidx.core.widget.AutoScrollHelper
 io.flutter.view.FlutterMain
@@ -8444,7 +8497,6 @@ kotlinx.coroutines.channels.SendChannel$DefaultImpls
 android.support.v4.app.INotificationSideChannel$Default
 kotlin.experimental.BitwiseOperationsKt
 io.flutter.embedding.android.FlutterActivityAndFragmentDelegate:
-    void onLowMemory()
     private static final java.lang.String TAG
     private static final java.lang.String FRAMEWORK_RESTORATION_BUNDLE_KEY
     private static final java.lang.String PLUGINS_RESTORATION_BUNDLE_KEY
@@ -9114,6 +9166,8 @@ kotlinx.coroutines.internal.LockFreeLinkedListKt:
     private static final java.lang.Object LIST_EMPTY
 io.flutter.plugins.webviewflutter.DisplayListenerProxy$1:
     final synthetic io.flutter.plugins.webviewflutter.DisplayListenerProxy this$0
+io.flutter.plugin.platform.VirtualDisplayController:
+    private static java.lang.String TAG
 androidx.collection.ContainerHelpers:
     static final long[] EMPTY_LONGS
 io.flutter.embedding.android.DrawableSplashScreen$1:
@@ -9190,8 +9244,6 @@ io.flutter.embedding.engine.mutatorsstack.FlutterMutatorsStack$FlutterMutator:
     final synthetic io.flutter.embedding.engine.mutatorsstack.FlutterMutatorsStack this$0
 androidx.lifecycle.MethodCallsLogger:
     private java.util.Map mCalledMethods
-io.flutter.embedding.engine.systemchannels.PlatformViewsChannel$1$1:
-    final synthetic io.flutter.embedding.engine.systemchannels.PlatformViewsChannel$1 this$1
 io.flutter.plugin.mouse.MouseCursorPlugin$2:
     final synthetic io.flutter.plugin.mouse.MouseCursorPlugin this$0
 androidx.exifinterface.media.ExifInterface:
@@ -9235,5 +9287,6 @@ androidx.core.content.res.ResourcesCompat:
     private static final java.lang.ThreadLocal sTempTypedValue
     private static final java.util.WeakHashMap sColorStateCaches
     private static final java.lang.Object sColorStateCacheLock
-io.flutter.plugin.common.BinaryMessenger$-CC
+io.flutter.view.TextureRegistry$SurfaceTextureEntry$-CC
 androidx.lifecycle.DefaultLifecycleObserver$-CC
+io.flutter.plugin.common.BinaryMessenger$-CC
