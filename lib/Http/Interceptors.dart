@@ -6,7 +6,6 @@ import 'package:flutter/widgets.dart';
 import 'package:moneyphi/Model/ErrorModel.dart';
 import 'package:moneyphi/utils/AppSnackBar.dart';
 
-import '../screens/login/login_screen.dart';
 import '../utils/SharedPref.dart';
 
 class HttpService {
@@ -203,8 +202,8 @@ Response? dioErrorHandler(
         context: context,
         background: Colors.red,
         content: "${response.statusMessage}");
-    Navigator.push(
-        context!, MaterialPageRoute(builder: (context) => LoginScreen()));
+    // Navigator.push(
+    //     context!, MaterialPageRoute(builder: (context) => LoginScreen()));
 
     return response;
   } else if (response?.statusCode == 504) {

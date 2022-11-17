@@ -3,7 +3,8 @@ import 'package:moneyphi/utils/Colors.dart';
 
 Color disabledColor = Color(0xff747474);
 Color scaffoldBackgroundColor = Colors.white;
-Color primaryColor = Color(0xff2AD95A);
+Color primaryColor = Color(0xff00124C);
+// Color primaryColor = Color(0xff2AD95A);
 
 //app theme
 // final ThemeData appTheme = ThemeData(

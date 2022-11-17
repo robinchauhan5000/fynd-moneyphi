@@ -10,8 +10,8 @@ import 'package:moneyphi/utils/Colors.dart';
 import 'package:moneyphi/utils/SizeConfig.dart';
 import 'package:provider/provider.dart';
 
+import './bloc/sign_up_bloc.dart';
 import '../../controller/SignUpRepo.dart';
-import 'bloc/sign_up_bloc.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({Key? key}) : super(key: key);
@@ -154,12 +154,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                   SizeConfig.screenHeight * 0.05)),
                             ),
                             onPressed: () async {
-                              var data = await signUpController!.signUpApi(
-                                  email: email.text,
-                                  pass: pass.text,
-                                  name: name.text,
-                                  phone: mobile.text,
-                                  context: context);
+                              // var data = await signUpController!.signUpApi(
+                              //     email: email.text,
+                              //     pass: pass.text,
+                              //     name: name.text,
+                              //     phone: mobile.text,
+                              //     context: context);
                               // context.read<SignUpBloc>().add(
                               //     SignUpFormSubmitEvent(
                               //         email: email.text,

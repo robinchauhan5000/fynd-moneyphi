@@ -6,36 +6,36 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
-8-->D:\Moneyphi\fyd-mobile-app\android\app\src\main\AndroidManifest.xml
+8-->D:\Moneyphi\New folder\fyd-mobile-app\android\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="30" />
-9-->D:\Moneyphi\fyd-mobile-app\android\app\src\main\AndroidManifest.xml
+9-->D:\Moneyphi\New folder\fyd-mobile-app\android\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->D:\Moneyphi\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:4:5-67
-11-->D:\Moneyphi\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:4:22-64
+11-->D:\Moneyphi\New folder\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:4:5-67
+11-->D:\Moneyphi\New folder\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:4:22-64
 12
 13    <application
-13-->D:\Moneyphi\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:5:5-53:19
+13-->D:\Moneyphi\New folder\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:5:5-53:19
 14        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 14-->[androidx.core:core:1.6.0] C:\Users\robin\.gradle\caches\transforms-2\files-2.1\be6c37f920226f799c8e079c11ae9b32\core-1.6.0\AndroidManifest.xml:24:18-86
 15        android:icon="@mipmap/ic_launcher"
-15-->D:\Moneyphi\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:7:9-43
+15-->D:\Moneyphi\New folder\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:7:9-43
 16        android:label="moneyphi" >
-16-->D:\Moneyphi\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:6:9-33
+16-->D:\Moneyphi\New folder\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:6:9-33
 17        <activity
-17-->D:\Moneyphi\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:8:9-47:20
+17-->D:\Moneyphi\New folder\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:8:9-47:20
 18            android:name="com.moneyphi.moneyphi.MainActivity"
-18-->D:\Moneyphi\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:9:13-41
+18-->D:\Moneyphi\New folder\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:9:13-41
 19            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-19-->D:\Moneyphi\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:12:13-163
+19-->D:\Moneyphi\New folder\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:12:13-163
 20            android:hardwareAccelerated="true"
-20-->D:\Moneyphi\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:13:13-47
+20-->D:\Moneyphi\New folder\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:13:13-47
 21            android:launchMode="singleTop"
-21-->D:\Moneyphi\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:10:13-43
+21-->D:\Moneyphi\New folder\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:10:13-43
 22            android:theme="@style/LaunchTheme"
-22-->D:\Moneyphi\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:11:13-47
+22-->D:\Moneyphi\New folder\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:11:13-47
 23            android:windowSoftInputMode="adjustResize" >
-23-->D:\Moneyphi\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:14:13-55
+23-->D:\Moneyphi\New folder\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:14:13-55
 24
 25            <!--
 26                 Specifies an Android theme to apply to this Activity as soon as
@@ -44,11 +44,11 @@
 29                 to determine the Window background behind the Flutter UI.
 30            -->
 31            <meta-data
-31-->D:\Moneyphi\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:20:13-23:17
+31-->D:\Moneyphi\New folder\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:20:13-23:17
 32                android:name="io.flutter.embedding.android.NormalTheme"
-32-->D:\Moneyphi\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:21:15-70
+32-->D:\Moneyphi\New folder\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:21:15-70
 33                android:resource="@style/NormalTheme" />
-33-->D:\Moneyphi\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:22:15-52
+33-->D:\Moneyphi\New folder\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:22:15-52
 34            <!--
 35                 Displays an Android View that continues showing the launch screen
 36                 Drawable until Flutter paints its first frame, then this splash
@@ -57,56 +57,56 @@
 39                 Flutter's first frame.
 40            -->
 41            <meta-data
-41-->D:\Moneyphi\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:29:13-32:17
+41-->D:\Moneyphi\New folder\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:29:13-32:17
 42                android:name="io.flutter.embedding.android.SplashScreenDrawable"
-42-->D:\Moneyphi\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:30:15-79
+42-->D:\Moneyphi\New folder\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:30:15-79
 43                android:resource="@drawable/launch_background" />
-43-->D:\Moneyphi\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:31:15-61
+43-->D:\Moneyphi\New folder\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:31:15-61
 44
 45            <intent-filter>
-45-->D:\Moneyphi\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:34:13-38:29
+45-->D:\Moneyphi\New folder\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:34:13-38:29
 46                <action android:name="android.intent.action.MAIN" />
-46-->D:\Moneyphi\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:36:17-68
-46-->D:\Moneyphi\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:36:25-66
+46-->D:\Moneyphi\New folder\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:36:17-68
+46-->D:\Moneyphi\New folder\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:36:25-66
 47
 48                <category android:name="android.intent.category.LAUNCHER" />
-48-->D:\Moneyphi\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:37:17-76
-48-->D:\Moneyphi\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:37:27-74
+48-->D:\Moneyphi\New folder\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:37:17-76
+48-->D:\Moneyphi\New folder\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:37:27-74
 49            </intent-filter>
 50
 51            <meta-data
-51-->D:\Moneyphi\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:39:13-90
+51-->D:\Moneyphi\New folder\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:39:13-90
 52                android:name="flutter_deeplinking_enabled"
-52-->D:\Moneyphi\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:39:24-66
+52-->D:\Moneyphi\New folder\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:39:24-66
 53                android:value="true" />
-53-->D:\Moneyphi\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:39:67-87
+53-->D:\Moneyphi\New folder\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:39:67-87
 54
 55            <intent-filter android:autoVerify="true" >
-55-->D:\Moneyphi\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:40:13-46:29
-55-->D:\Moneyphi\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:40:28-53
+55-->D:\Moneyphi\New folder\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:40:13-46:29
+55-->D:\Moneyphi\New folder\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:40:28-53
 56                <action android:name="android.intent.action.VIEW" />
-56-->D:\Moneyphi\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:41:17-69
-56-->D:\Moneyphi\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:41:25-66
+56-->D:\Moneyphi\New folder\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:41:17-69
+56-->D:\Moneyphi\New folder\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:41:25-66
 57
 58                <category android:name="android.intent.category.DEFAULT" />
-58-->D:\Moneyphi\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:42:17-76
-58-->D:\Moneyphi\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:42:27-73
+58-->D:\Moneyphi\New folder\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:42:17-76
+58-->D:\Moneyphi\New folder\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:42:27-73
 59                <category android:name="android.intent.category.BROWSABLE" />
-59-->D:\Moneyphi\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:43:17-78
-59-->D:\Moneyphi\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:43:27-75
+59-->D:\Moneyphi\New folder\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:43:17-78
+59-->D:\Moneyphi\New folder\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:43:27-75
 60
 61                <data
-61-->D:\Moneyphi\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:44:17-79
+61-->D:\Moneyphi\New folder\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:44:17-79
 62                    android:host="app.moneyphi.com"
-62-->D:\Moneyphi\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:44:45-76
+62-->D:\Moneyphi\New folder\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:44:45-76
 63                    android:scheme="http" />
-63-->D:\Moneyphi\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:44:23-44
+63-->D:\Moneyphi\New folder\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:44:23-44
 64                <data
-64-->D:\Moneyphi\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:44:17-79
+64-->D:\Moneyphi\New folder\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:44:17-79
 65                    android:host="app.moneyphi.com"
-65-->D:\Moneyphi\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:44:45-76
+65-->D:\Moneyphi\New folder\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:44:45-76
 66                    android:scheme="https" />
-66-->D:\Moneyphi\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:44:23-44
+66-->D:\Moneyphi\New folder\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:44:23-44
 67            </intent-filter>
 68        </activity>
 69        <!--
@@ -114,28 +114,28 @@
 71             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
 72        -->
 73        <meta-data
-73-->D:\Moneyphi\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:50:9-52:33
+73-->D:\Moneyphi\New folder\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:50:9-52:33
 74            android:name="flutterEmbedding"
-74-->D:\Moneyphi\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:51:13-44
+74-->D:\Moneyphi\New folder\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:51:13-44
 75            android:value="2" />
-75-->D:\Moneyphi\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:52:13-30
+75-->D:\Moneyphi\New folder\fyd-mobile-app\android\app\src\main\AndroidManifest.xml:52:13-30
 76
 77        <provider
-77-->[:image_picker_android] D:\Moneyphi\fyd-mobile-app\build\image_picker_android\intermediates\library_manifest\release\AndroidManifest.xml:8:9-16:20
+77-->[:image_picker_android] D:\Moneyphi\New folder\fyd-mobile-app\build\image_picker_android\intermediates\library_manifest\release\AndroidManifest.xml:8:9-16:20
 78            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
-78-->[:image_picker_android] D:\Moneyphi\fyd-mobile-app\build\image_picker_android\intermediates\library_manifest\release\AndroidManifest.xml:9:13-82
+78-->[:image_picker_android] D:\Moneyphi\New folder\fyd-mobile-app\build\image_picker_android\intermediates\library_manifest\release\AndroidManifest.xml:9:13-82
 79            android:authorities="com.moneyphi.moneyphi.flutter.image_provider"
-79-->[:image_picker_android] D:\Moneyphi\fyd-mobile-app\build\image_picker_android\intermediates\library_manifest\release\AndroidManifest.xml:10:13-74
+79-->[:image_picker_android] D:\Moneyphi\New folder\fyd-mobile-app\build\image_picker_android\intermediates\library_manifest\release\AndroidManifest.xml:10:13-74
 80            android:exported="false"
-80-->[:image_picker_android] D:\Moneyphi\fyd-mobile-app\build\image_picker_android\intermediates\library_manifest\release\AndroidManifest.xml:11:13-37
+80-->[:image_picker_android] D:\Moneyphi\New folder\fyd-mobile-app\build\image_picker_android\intermediates\library_manifest\release\AndroidManifest.xml:11:13-37
 81            android:grantUriPermissions="true" >
-81-->[:image_picker_android] D:\Moneyphi\fyd-mobile-app\build\image_picker_android\intermediates\library_manifest\release\AndroidManifest.xml:12:13-47
+81-->[:image_picker_android] D:\Moneyphi\New folder\fyd-mobile-app\build\image_picker_android\intermediates\library_manifest\release\AndroidManifest.xml:12:13-47
 82            <meta-data
-82-->[:image_picker_android] D:\Moneyphi\fyd-mobile-app\build\image_picker_android\intermediates\library_manifest\release\AndroidManifest.xml:13:13-15:75
+82-->[:image_picker_android] D:\Moneyphi\New folder\fyd-mobile-app\build\image_picker_android\intermediates\library_manifest\release\AndroidManifest.xml:13:13-15:75
 83                android:name="android.support.FILE_PROVIDER_PATHS"
-83-->[:image_picker_android] D:\Moneyphi\fyd-mobile-app\build\image_picker_android\intermediates\library_manifest\release\AndroidManifest.xml:14:17-67
+83-->[:image_picker_android] D:\Moneyphi\New folder\fyd-mobile-app\build\image_picker_android\intermediates\library_manifest\release\AndroidManifest.xml:14:17-67
 84                android:resource="@xml/flutter_image_picker_file_paths" />
-84-->[:image_picker_android] D:\Moneyphi\fyd-mobile-app\build\image_picker_android\intermediates\library_manifest\release\AndroidManifest.xml:15:17-72
+84-->[:image_picker_android] D:\Moneyphi\New folder\fyd-mobile-app\build\image_picker_android\intermediates\library_manifest\release\AndroidManifest.xml:15:17-72
 85        </provider>
 86
 87        <uses-library

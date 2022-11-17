@@ -41,6 +41,8 @@ dependencies:
   equatable: ^2.0.3
   signature: ^5.0.0
   datetime_picker_formfield:
+  flutter_otp_text_field:
+  smooth_page_indicator: ^1.0.0+2
   intl:
   flutter_localizations:
     sdk: flutter

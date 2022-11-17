@@ -747,7 +747,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       padding:
                           EdgeInsets.symmetric(vertical: 10, horizontal: 20),
                       decoration: BoxDecoration(
-                          color: Colors.green,
+                          color: Color(0xff00124C),
                           borderRadius: BorderRadius.circular(75)),
                       child: Text(
                         AppLocalizations.of(context)!.clickhere,

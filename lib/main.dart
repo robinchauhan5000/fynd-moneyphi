@@ -12,6 +12,7 @@ import 'package:moneyphi/controller/PanVerificationRepo.dart';
 import 'package:moneyphi/controller/PortfolioController.dart';
 import 'package:moneyphi/controller/check_out_controller.dart';
 import 'package:moneyphi/controller/dashBoardController.dart';
+import 'package:moneyphi/screens/initialLoginScreens/InitialLoginScreen.dart';
 import 'package:moneyphi/screens/kycFoms/bsc_code_bloc/bsc_code_bloc.dart';
 import 'package:moneyphi/screens/kycFoms/kyc_bloc/part_two_one/part_two_one_cubit.dart';
 import 'package:moneyphi/screens/kycFoms/kyc_bloc/part_two_three/part_two_three_cubit.dart';
@@ -27,7 +28,6 @@ import 'controller/LocaleProvider.dart';
 import 'controller/MutualFundsController.dart';
 import 'controller/PaymentController.dart';
 import 'controller/signUpController.dart';
-import 'screens/splash_screen.dart';
 
 class MyHttpOverrides extends HttpOverrides {
   @override
@@ -126,7 +126,8 @@ class MyApp extends StatelessWidget {
                     debugShowCheckedModeBanner: false,
                     title: 'Money Phi',
                     theme: context.watch<ThemeCubit>().state.theme,
-                    home: SplashScreen()
+                    home: OnboardingFlow()
+                    //SplashScreen() LoginWithEmailPassword()
                     // BottomNavBarV2()
                     // SplashScreen(),
                     );

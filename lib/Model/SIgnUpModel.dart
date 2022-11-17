@@ -4,79 +4,94 @@
 
 import 'dart:convert';
 
-import 'package:flutter/cupertino.dart';
-
-import 'package:flutter/cupertino.dart';
-
-import 'package:flutter/cupertino.dart';
-
-SignupApiModel signupApiModelFromJson(String str) => SignupApiModel.fromJson(json.decode(str));
+SignupApiModel signupApiModelFromJson(String str) =>
+    SignupApiModel.fromJson(json.decode(str));
 
 String signupApiModelToJson(SignupApiModel data) => json.encode(data.toJson());
 
 class SignupApiModel {
-  SignupApiModel({
-    required this.token,
-    required this.refreshToken,
-    required this.investor,
-     required this.isInvestorExist
+  String? token;
+  String? refreshToken;
+  Investor? investor;
+
+  SignupApiModel({this.token, this.refreshToken, this.investor});
+
+  SignupApiModel.fromJson(Map<String, dynamic> json) {
+    token = json['token'];
+    refreshToken = json['refreshToken'];
+    investor = json['investor'] != null
+        ? new Investor.fromJson(json['investor'])
+        : null;
   }
 
-
-  );
-
-  String token;
-  String refreshToken;
-  Investor investor;
-  bool isInvestorExist=false;
-
-  factory SignupApiModel.fromJson(Map<String, dynamic> json) => SignupApiModel(
-    token: json["token"],
-    refreshToken: json["refreshToken"],
-    isInvestorExist: json["isInvestorExist"]==null?false:json["isInvestorExist"],
-    investor: Investor.fromJson(json["investor"]),
-  );
-
-  Map<String, dynamic> toJson() => {
-    "token": token,
-    "refreshToken": refreshToken,
-    "isInvestorExist": isInvestorExist==null?false:true,
-    "investor": investor.toJson(),
-  };
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['token'] = this.token;
+    data['refreshToken'] = this.refreshToken;
+    if (this.investor != null) {
+      data['investor'] = this.investor!.toJson();
+    }
+    return data;
+  }
 }
 
 class Investor {
-  Investor({
-    required this.insId,
-    required this.name,
-    required this.email,
-    required this.phoneCode,
-    required this.phoneNumber,
-    required this.msg,
-  });
+  String? userRole;
+  int? insId;
+  String? name;
+  String? userName;
+  int? phoneCode;
+  int? phoneNumber;
+  String? status;
+  int? phoneVerified;
+  int? emailVerified;
+  String? kycStatus;
+  int? isKycDone;
+  int? isFactaDone;
 
-  int insId;
-  String name;
-  String email;
-  String phoneCode;
-  String phoneNumber;
-  String msg;
+  Investor(
+      {this.userRole,
+      this.insId,
+      this.name,
+      this.userName,
+      this.phoneCode,
+      this.phoneNumber,
+      this.status,
+      this.phoneVerified,
+      this.emailVerified,
+      this.kycStatus,
+      this.isKycDone,
+      this.isFactaDone});
 
-  factory Investor.fromJson(Map<String, dynamic> json) => Investor(
-    insId: json["insId"],
-    name: json["name"],
-    email: json["email"],
-    phoneCode: json["phoneCode"],
-    phoneNumber: json["phoneNumber"],
-    msg: json["msg"],
-  );
+  Investor.fromJson(Map<String, dynamic> json) {
+    userRole = json['userRole'];
+    insId = json['insId'];
+    name = json['name'];
+    userName = json['userName'];
+    phoneCode = json['phoneCode'];
+    phoneNumber = json['phoneNumber'];
+    status = json['status'];
+    phoneVerified = json['phoneVerified'];
+    emailVerified = json['emailVerified'];
+    kycStatus = json['kycStatus'];
+    isKycDone = json['isKycDone'];
+    isFactaDone = json['isFactaDone'];
+  }
 
-  Map<String, dynamic> toJson() => {
-    "insId": insId,
-    "name": name,
-    "email": email,
-    "phoneCode": phoneCode,
-    "phoneNumber": phoneNumber,
-    "msg": msg,
-  };
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['userRole'] = this.userRole;
+    data['insId'] = this.insId;
+    data['name'] = this.name;
+    data['userName'] = this.userName;
+    data['phoneCode'] = this.phoneCode;
+    data['phoneNumber'] = this.phoneNumber;
+    data['status'] = this.status;
+    data['phoneVerified'] = this.phoneVerified;
+    data['emailVerified'] = this.emailVerified;
+    data['kycStatus'] = this.kycStatus;
+    data['isKycDone'] = this.isKycDone;
+    data['isFactaDone'] = this.isFactaDone;
+    return data;
+  }
 }
