@@ -1,4 +1,0 @@
-#Thu Nov 10 00:14:49 IST 2022
-base.0=D\:\\Moneyphi\\New folder\\fyd-mobile-app\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
-renamed.0=classes.dex
-path.0=classes.dex
