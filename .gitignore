@@ -6,6 +6,8 @@
 # Node artifact files
 node_modules/
 dist/
+build/
+
 
 # Compiled Java class files
 *.class
@@ -25,6 +27,7 @@ dist/
 
 # JetBrains IDE
 .idea/
+.dart_tool/
 
 # Unit test reports
 TEST*.xml
