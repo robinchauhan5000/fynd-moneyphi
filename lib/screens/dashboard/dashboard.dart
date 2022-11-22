@@ -224,54 +224,54 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                                     )),
                                               ),
                                             ),
-                                      // CircleAvatar(
-                                      //   child:
-                                      //       Text(profile.cartCount.toString()),
-                                      // ),
-                                      // Container(
-                                      //   width: 100,
-                                      //   padding: EdgeInsets.only(
-                                      //       left: 10, right: 10),
-                                      //   alignment: Alignment.centerLeft,
-                                      //   decoration: BoxDecoration(
-                                      //     color: Colors.indigo,
-                                      //     borderRadius:
-                                      //         BorderRadius.circular(2),
-                                      //   ),
-                                      //   child: DropdownButton<String>(
-                                      //     value: language.locale.toString() ==
-                                      //             "en"
-                                      //         ? "English"
-                                      //         : language.locale.toString() ==
-                                      //                 "hi"
-                                      //             ? "Hindi"
-                                      //             : "Gujarati",
-                                      //     icon: Icon(
-                                      //       Icons.arrow_downward,
-                                      //       color: Colors.white,
-                                      //     ),
-                                      //     iconSize: 20,
-                                      //     elevation: 0,
-                                      //     style: TextStyle(color: Colors.white),
-                                      //     underline: Container(
-                                      //       height: 1,
-                                      //     ),
-                                      //     dropdownColor: Colors.indigo,
-                                      //     onChanged: (String? newValue) {
-                                      //       language.changeLocale(newValue);
-                                      //     },
-                                      //     items: defaultData
-                                      //         .languagesListDefault
-                                      //         .map<DropdownMenuItem<String>>(
-                                      //       (String value) {
-                                      //         return DropdownMenuItem<String>(
-                                      //           value: value,
-                                      //           child: Text(value),
-                                      //         );
-                                      //       },
-                                      //     ).toList(),
-                                      //   ),
-                                      // ),
+                                      CircleAvatar(
+                                        child:
+                                            Text(profile.cartCount.toString()),
+                                      ),
+                                      Container(
+                                        width: 100,
+                                        padding: EdgeInsets.only(
+                                            left: 10, right: 10),
+                                        alignment: Alignment.centerLeft,
+                                        decoration: BoxDecoration(
+                                          color: Colors.indigo,
+                                          borderRadius:
+                                              BorderRadius.circular(2),
+                                        ),
+                                        child: DropdownButton<String>(
+                                          value: language.locale.toString() ==
+                                                  "en"
+                                              ? "English"
+                                              : language.locale.toString() ==
+                                                      "hi"
+                                                  ? "Hindi"
+                                                  : "Gujarati",
+                                          icon: Icon(
+                                            Icons.arrow_downward,
+                                            color: Colors.white,
+                                          ),
+                                          iconSize: 20,
+                                          elevation: 0,
+                                          style: TextStyle(color: Colors.white),
+                                          underline: Container(
+                                            height: 1,
+                                          ),
+                                          dropdownColor: Colors.indigo,
+                                          onChanged: (String? newValue) {
+                                            language.changeLocale(newValue);
+                                          },
+                                          items: defaultData
+                                              .languagesListDefault
+                                              .map<DropdownMenuItem<String>>(
+                                            (String value) {
+                                              return DropdownMenuItem<String>(
+                                                value: value,
+                                                child: Text(value),
+                                              );
+                                            },
+                                          ).toList(),
+                                        ),
+                                      ),
                                     ],
                                   ),
                                 ],
